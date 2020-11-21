@@ -70,13 +70,13 @@ To get a local copy up and running follow these steps.
 
 ### Installation
 
-1. Clone the repo
+1. Clone the repo.
 ```sh
 git clone https://github.com/UNICEFECAR/parent-buddy-cms.git
 OR
 git clone git@github.com:UNICEFECAR/parent-buddy-cms.git
 ```
-2. Go into root of the project and run following commands
+2. Go into root of the project and run following commands:
 ```sh
 composer install
 
@@ -98,21 +98,22 @@ mysql -u username -p
 CREATE DATABASE `database_name` CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 exit;
 ```
-4. System is now prepared for installation so go with your browser to `http://domain/docroot/` to run the installation
-5. Select English as default site language
-6. When prompted to select installation profile choose 'Use existing configuration'
-7. Follow the rest of the installation process and finish installation of CMS
-8. Once installation is finished - set `trusted_host_patterns` setting in settings.php to reflect your domain you will be running CMS from
-9. Go back to command line and execute following commands to secure the site
+4. System is now prepared for installation so go with your browser to `http://domain/docroot/` to run the installation.
+5. Select English as default site language.
+6. When prompted to select installation profile choose 'Use existing configuration'.
+7. Follow the rest of the installation process and finish installation of CMS.
+8. Once installation is finished - set `trusted_host_patterns` setting in settings.php to reflect your domain you will be running CMS from.
+9. Go back to command line and execute following commands to secure the site.
 ```sh
 chmod go-w docroot/sites/default
 chmod go-w docroot/sites/default/settings.php
 ```
-10. Go back to CMS and in Appearance section set 'Seven' as default and administration theme, clear the cache, set 'Claro' theme as default, cleare the cache and uninstall 'Seven' theme
-11. Change Front Page information from 'node' to 'front-page' in 'admin/config/system/site-information'
-12. Import Serbian translations ('admin/config/regional/translate/import') from 'sr.po' file that is in 'config' folder in root of the project. Select 'Overwrite non-customized translations' option when doing import
-13. Create `administer_users` user and give him `Administer Users` role
-14. Create `access_content` user and give him `Access Content` role
+10. Go back to CMS and in Appearance section set 'Seven' as default and administration theme, clear the cache, set 'Claro' theme as default, cleare the cache and uninstall 'Seven' theme.
+11. Change Front Page information from 'node' to 'front-page' in 'admin/config/system/site-information'.
+12. Import Serbian translations ('admin/config/regional/translate/import') from 'sr.po' file that is in 'config' folder in root of the project. Select 'Overwrite non-customized translations' option when doing import.
+13. Go to 'docroot/sites/default/files/translations' folder and delete 'sr.po' file. Go to 'file_managed' database table and delete the line witch holds 'sr.po' as filename. Flush all caches.
+14. Create `administer_users` user and give him `Administer Users` role.
+15. Create `access_content` user and give him `Access Content` role.
 
 
 <!-- CONTACT -->
