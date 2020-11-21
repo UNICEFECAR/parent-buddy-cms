@@ -1,0 +1,26 @@
+uuid: c8a3e810-861b-45e6-8340-daab08d69d8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - claro
+id: userlogin
+theme: claro
+region: content
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/reset/*\r\n/user/password\r\n/form/*\r\n/webform-submission*"
+    negate: true
+    context_mapping: {  }

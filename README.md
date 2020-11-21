@@ -108,9 +108,11 @@ exit;
 chmod go-w docroot/sites/default
 chmod go-w docroot/sites/default/settings.php
 ```
-10. Go back to CMS and in Appearance section set 'Seven' as default and administration theme and disable 'Claro' theme
-11. Create `administer_users` user and give him `Administer Users` role
-12. Create `access_content` user and give him `Access Content` role
+10. Go back to CMS and in Appearance section set 'Seven' as default and administration theme, clear the cache, set 'Claro' theme as default, cleare the cache and uninstall 'Seven' theme
+11. Change Front Page information from 'node' to 'front-page' in 'admin/config/system/site-information'
+12. Import Serbian translations ('admin/config/regional/translate/import') from 'sr.po' file that is in 'config' folder in root of the project. Select 'Overwrite non-customized translations' option when doing import
+13. Create `administer_users` user and give him `Administer Users` role
+14. Create `access_content` user and give him `Access Content` role
 
 
 <!-- CONTACT -->
