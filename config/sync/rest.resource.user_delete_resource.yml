@@ -1,0 +1,18 @@
+uuid: 87411a5d-7206-4ac9-a16f-47e21e60e2a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - halo_beba_api
+id: user_delete_resource
+plugin_id: user_delete_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+  authentication:
+    - basic_auth

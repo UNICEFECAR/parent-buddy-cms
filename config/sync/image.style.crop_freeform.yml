@@ -1,0 +1,17 @@
+uuid: 670206f8-6592-4dd8-8feb-a0e03689858e
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.freeform
+  module:
+    - crop
+name: crop_freeform
+label: 'Cropped: Freeform'
+effects:
+  5e1514da-1fb5-4f97-8c1b-4509fd5f9cd8:
+    uuid: 5e1514da-1fb5-4f97-8c1b-4509fd5f9cd8
+    id: crop_crop
+    weight: null
+    data:
+      crop_type: freeform

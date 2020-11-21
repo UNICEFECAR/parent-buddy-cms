@@ -1,0 +1,30 @@
+uuid: c22311c7-d5fa-4b3e-9400-3c9d99ba1174
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: 'Role that will be given to Users that are going to access the Application and evaluate it.'
+id: application_evaluation
+label: 'Application Evaluation'
+weight: 14
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'reorder terms in categories'
+  - 'reorder terms in keywords'
+  - 'reorder terms in predefined_tags'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view article revisions'
+  - 'view daily_homescreen_messages revisions'
+  - 'view faq revisions'
+  - 'view latest version'
+  - 'view milestone revisions'
+  - 'view page revisions'
+  - 'view video_article revisions'

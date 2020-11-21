@@ -1,0 +1,14 @@
+uuid: f09a7551-a298-4fca-ad56-0d8a7776ee52
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.daily_homescreen_messages_creator
+  module:
+    - user
+id: user_add_role_action.daily_homescreen_messages_creator
+label: 'Add the Daily Homescreen Messages creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: daily_homescreen_messages_creator

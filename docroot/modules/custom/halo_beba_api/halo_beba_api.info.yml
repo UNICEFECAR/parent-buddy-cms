@@ -1,0 +1,5 @@
+name: 'Halo Beba API'
+type: module
+description: 'Custom REST API Calls for Halo Beba application'
+core: 8.x
+package: 'Custom'

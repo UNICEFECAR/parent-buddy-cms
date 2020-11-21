@@ -1,0 +1,14 @@
+uuid: 72794b8f-9c6b-4fd1-ae18-a5dbe6cdd456
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.manage_australian_articles
+  module:
+    - user
+id: user_remove_role_action.manage_australian_articles
+label: 'Remove the Manage Australian Articles role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: manage_australian_articles

@@ -1,0 +1,14 @@
+uuid: dd80c88b-1aaa-47dc-a7dc-2481d503bf76
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.manage_australian_articles
+  module:
+    - user
+id: user_add_role_action.manage_australian_articles
+label: 'Add the Manage Australian Articles role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: manage_australian_articles

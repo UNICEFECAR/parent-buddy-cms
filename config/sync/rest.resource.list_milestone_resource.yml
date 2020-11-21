@@ -1,0 +1,18 @@
+uuid: a5876bb1-5cf9-4f92-9907-fff22982b800
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - halo_beba_api
+id: list_milestone_resource
+plugin_id: list_milestone_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+  authentication:
+    - basic_auth

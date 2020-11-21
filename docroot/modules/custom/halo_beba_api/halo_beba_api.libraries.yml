@@ -1,0 +1,23 @@
+halo_beba_api.css-overrides:
+  css:
+    theme:
+      css/overrides.css: {}
+
+halo_beba_api.css-webform-questionnaires:
+  css:
+    theme:
+      css/webform_questionnaires.css: {}
+
+halo_beba_api.css-webform-application-feedback:
+  css:
+    theme:
+      css/webform_application_feedback.css: {}
+
+halo_beba_api.css-webform-submission:
+  css:
+    theme:
+      css/webform_submission.css: {}
+
+halo_beba_api.js-close-webform-view:
+  js:
+    js/close_webform_view.js: {}

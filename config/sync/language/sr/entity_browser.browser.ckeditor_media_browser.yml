@@ -1,0 +1,8 @@
+label: 'Medija pretraživač (CKEditor)'
+display_configuration:
+  link_text: 'Izaberite entitete'
+widgets:
+  8b142f33-59d1-47b1-9e3a-4ae85d8376fa:
+    label: 'Napravite ugrađeni'
+  044d2af7-314b-4830-8b6d-64896bbb861e:
+    label: Otpremiti

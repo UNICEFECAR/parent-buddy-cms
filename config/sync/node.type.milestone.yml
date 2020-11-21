@@ -1,0 +1,21 @@
+uuid: c1568cb7-df10-4a36-8076-68b7f8d4714e
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_workflow
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  lightning_workflow:
+    workflow: editorial
+name: Milestone
+type: milestone
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

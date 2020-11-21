@@ -1,0 +1,28 @@
+# Ignore binaries.
+/bin
+
+# Ignore non-custom parts of Drupal.
+/docroot/core
+/docroot/libraries
+/docroot/modules/contrib
+/docroot/profiles/contrib
+/docroot/themes/contrib
+
+# Ignore paths that contain user-generated content.
+/docroot/sites/*/files
+/docroot/sites/*/private
+
+# Ignore Composer-managed dependencies.
+vendor/
+
+# Ignore configuration files that may contain sensitive information.
+/docroot/sites/*/settings*.php
+/docroot/sites/*/services*.yml
+
+# Ignore Composer lock file
+composer.lock
+
+# Ignore this 2 files because installation from custom setting is failling
+# because of them and they do not have any configuration so are not used
+/config/sync/core.base_field_override.node.landing_page.moderation_state.yml
+/config/sync/core.base_field_override.node.page.moderation_state.yml

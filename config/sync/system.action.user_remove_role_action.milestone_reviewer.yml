@@ -1,0 +1,14 @@
+uuid: 92e56e2a-ca21-4b41-b9fd-a6fdc55bf06e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.milestone_reviewer
+  module:
+    - user
+id: user_remove_role_action.milestone_reviewer
+label: 'Remove the Milestone reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: milestone_reviewer

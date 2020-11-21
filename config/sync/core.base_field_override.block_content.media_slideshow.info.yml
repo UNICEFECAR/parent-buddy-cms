@@ -1,0 +1,18 @@
+uuid: b1ed5ca1-6173-450b-b7d3-99f728b80cb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_slideshow
+id: block_content.media_slideshow.info
+field_name: info
+entity_type: block_content
+bundle: media_slideshow
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

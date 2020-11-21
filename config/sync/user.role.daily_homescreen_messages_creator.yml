@@ -1,0 +1,45 @@
+uuid: 11c145c5-b6e7-4260-832e-15cc3a29d639
+langcode: en
+status: true
+dependencies: {  }
+id: daily_homescreen_messages_creator
+label: 'Daily Homescreen Messages creator'
+weight: -2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access ckeditor_media_browser entity browser pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access media_browser entity browser pages'
+  - 'access toolbar'
+  - 'administer content translation'
+  - 'create content translations'
+  - 'create daily_homescreen_messages content'
+  - 'delete all revisions'
+  - 'delete any daily_homescreen_messages content'
+  - 'delete content translations'
+  - 'delete daily_homescreen_messages revisions'
+  - 'delete own daily_homescreen_messages content'
+  - 'edit any daily_homescreen_messages content'
+  - 'edit own daily_homescreen_messages content'
+  - 'revert all revisions'
+  - 'revert daily_homescreen_messages revisions'
+  - 'translate any entity'
+  - 'update content translations'
+  - 'use editorial transition archive'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation dashboard'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view daily_homescreen_messages revisions'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view terms in categories'
+  - 'view terms in keywords'
+  - 'view terms in predefined_tags'

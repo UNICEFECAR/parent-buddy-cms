@@ -1,0 +1,18 @@
+uuid: 1ed2699a-dc65-4cff-a8ea-40d18ba759cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - halo_beba_api
+id: list_daily_homescreen_message
+plugin_id: list_daily_homescreen_message
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+  authentication:
+    - basic_auth

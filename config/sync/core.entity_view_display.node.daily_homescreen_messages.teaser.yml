@@ -1,0 +1,23 @@
+uuid: 4401d95c-7399-41a9-bf4c-220d54a9674b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.daily_homescreen_messages
+  module:
+    - user
+id: node.daily_homescreen_messages.teaser
+targetEntityType: node
+bundle: daily_homescreen_messages
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  langcode: true
+  search_api_excerpt: true

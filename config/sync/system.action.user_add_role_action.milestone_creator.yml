@@ -1,0 +1,14 @@
+uuid: 81d7494b-dc5e-4bed-a83f-5c15878682a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.milestone_creator
+  module:
+    - user
+id: user_add_role_action.milestone_creator
+label: 'Add the Milestone creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: milestone_creator

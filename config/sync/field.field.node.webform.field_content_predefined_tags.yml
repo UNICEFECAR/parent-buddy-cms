@@ -1,0 +1,29 @@
+uuid: 1951dbd8-0ec3-4826-b907-5854ffc8e410
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_predefined_tags
+    - node.type.webform
+    - taxonomy.vocabulary.predefined_tags
+id: node.webform.field_content_predefined_tags
+field_name: field_content_predefined_tags
+entity_type: node
+bundle: webform
+label: 'Predefined Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      predefined_tags: predefined_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,52 @@
+label: 'Moderacijska Tabla u Pregledu'
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Primeni
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+      fields:
+        title:
+          separator: ','
+      empty:
+        area_text_custom:
+          content: 'Nepostoji sadržaj za recenziju.'
+      title: 'Moderacijska Tabla u Pregledu'
+  block_1:
+    display_title: 'U pregledu'
+  block_2:
+    display_title: 'U nacrtu'
+    display_options:
+      empty:
+        area_text_custom:
+          content: 'Nepostoji sadržaj u nacrtu.'
+      title: 'U nacrtu'
+  block_3:
+    display_title: 'Vaši nacrti'
+    display_options:
+      empty:
+        area_text_custom:
+          content: 'Nije pronađen sadržaj u nacrtu.'
+      title: 'Vaši nacrti'
+      arguments:
+        uid:
+          exception:
+            title: Sve
+        'null':
+          admin_label: 'Ulogovani korisnik'
+          exception:
+            title: Sve

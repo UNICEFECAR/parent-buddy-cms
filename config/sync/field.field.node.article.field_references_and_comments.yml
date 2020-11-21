@@ -1,0 +1,21 @@
+uuid: 11a88f06-fb23-4ec5-804f-6d3d5e38ef0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_references_and_comments
+    - node.type.article
+  module:
+    - text
+id: node.article.field_references_and_comments
+field_name: field_references_and_comments
+entity_type: node
+bundle: article
+label: 'References and comments'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,47 @@
+uuid: e7ab214c-0401-4f68-9cab-55ee6215fcd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.body
+    - field.field.node.article.field_australian_article
+    - field.field.node.article.field_content_category
+    - field.field.node.article.field_content_predefined_tags
+    - field.field.node.article.field_cover_image
+    - field.field.node.article.field_keywords
+    - field.field.node.article.field_references_and_comments
+    - field.field.node.article.field_related_articles
+    - node.type.article
+  module:
+    - text
+    - user
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  field_australian_article: true
+  field_content_category: true
+  field_content_predefined_tags: true
+  field_cover_image: true
+  field_keywords: true
+  field_references_and_comments: true
+  field_related_articles: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,5 @@
+label: 'Pregled čvora'
+description: 'Kada je omogućeno, ovo nadjačava podrazumevano ponašanje Drupala za prikazivanje čvorova na <em>/node/{node}</em>. Ako dodate varijante, možete koristiti kriterijume za izbor, kao što su tip čvora ili jezik ili pristup korisniku da biste pružili različite prikaze čvorova. Ako nije odabrana nijedna varijanta, koristiće se zadani prikaz Drupal čvora. Ova stranica utiče samo na čvorove koji se gledaju kao stranice, neće uticati na čvorove koji se gledaju u listama ili na drugim lokacijama.'
+parameters:
+  node:
+    label: Čvor

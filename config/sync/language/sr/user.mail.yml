@@ -1,0 +1,27 @@
+cancel_confirm:
+  body: "[user:display-name],\r\n\r\nZahtev za gašenje naloga je napravlje na sajtu [site:name].\r\n\r\nSada možete ugasiti svoj nalog na  [site:url-brief]\r\nkilkom na link ili kopiranjem linka u vaš pretraživač:\r\n\r\n[user:cancel-url]\r\n\r\nNAPOMENA: Jednom kada ugasite svoj nalog, one je bespovratno obrisan.\r\n\r\nOvaj link traje jedan dan. Ukoliko ga ne iskoristite ništa se neće desiti.\r\n\r\n--  [site:name] tim."
+  subject: 'Podnet je zahtev za gašenje naloga [user:display-name] na sajtu [site:name]'
+password_reset:
+  body: "[user:display-name],\r\n\r\nPodnesen je zahtev za promenu lozinke на сајту [site:name].\r\n\r\nMožete se prijaviti na sajt klikom na link ispod ili ako isti iskopirate u vaš pretraživač:\r\n\r\n[user:one-time-login-url]\r\n\r\nOvaj link se može iskoristiti samo jednom. On će vas odvesti na stranicu gde ćete moći da izmenite lozinku. On će isteći za 1 dan i ništa se neće dogoditi ako ga ne iskoristite\r\n\r\n--  [site:name] tim."
+  subject: 'Zamenske informacije za prijavu za nalog [user:display-name] na sajtu [site:name]'
+register_admin_created:
+  body: "[user:display-name],\r\n\r\nAdministrator [site:name] je napravio nalog za vas. Možete se prijaviti na sajt klikom na link ispod ili ako isti iskopirate u vaš pretraživač:\r\n\r\n[user:one-time-login-url]\r\n\r\nOvaj link se može iskoristiti samo jednom. On će vas odvesti na stranicu gde ćete moći da izmenite lozinku.\r\n\r\nNakon što podesite lozinku, možete se prijaviti ovde [site:login-url] koristeći sledeće podatke:\r\n\r\nkorisničko imе: [user:name]\r\nlozinka: Lozinka koju ste uneli na gornjem linku\r\n\r\n--  [site:name] tim"
+  subject: 'Administrator je kreirao nalog za vas na [site:name]'
+register_no_approval_required:
+  body: "[user:display-name],\r\n\r\nHvala što ste se registrovali na sajt [site:name]. Sada se možete prijaviti klikom na link ispod ili ako isti iskopirate u vaš pretraživač:\r\n\r\n[user:one-time-login-url]\r\n\r\nOvaj link se može iskoristiti samo jednom. On će vas odvesti na stranicu gde ćete moći da izmenite lozinku.\r\n\r\nNakon što podesite lozinku, možete se prijaviti ovde [site:login-url] koristeći sledeće podatke:\r\n\r\nkorisničko imе: [user:name]\r\nlozinka: Lozinka koju ste uneli na gornjem linku\r\n\r\n--  [site:name] tim."
+  subject: 'Detalji naloga [user:display-name] na [site:name]'
+register_pending_approval:
+  body: "[user:display-name],\r\n\r\nHvala što ste se registrovali na sajt [site:name].\r\n\r\nVaša prijava za nalog trenutno čeka odobrenje.\r\n\r\nNakon što je odobrena, dobićete još jedan e-mail koji će sadržati informacije o tome kako se prijaviti, postaviti lozinku i druge detalje.\r\n\r\n-- [site:name] team"
+  subject: 'Detalji naloga za [user:display-name] na [site:name] (čeka se odobrenje administratora)'
+register_pending_approval_admin:
+  body: "[user:display-name] se prijavio za otvaranje naloga.\r\n\r\n[user:edit-url]"
+  subject: 'Detalji naloga za [user:display-name] na [site:name] (čeka se odobrenje administratora)'
+status_activated:
+  body: "[user:display-name],\r\n\r\nVaš nalog na sajtu [site:name] je aktiviran.\r\n\r\nSada se možete prijaviti klikom na link ispod ili ako isti iskopirate u vaš pretraživač:\r\n\r\n[user:one-time-login-url]\r\n\r\nOvaj link se može iskoristiti samo jednom. On će vas odvesti do stranice gde ćete morati uneti lozinku za ovaj sajt.\r\n\r\nNakon što podesite lozinku, možete se prijaviti ovde: [site:login-url] koristeći sledeće podatke:\r\n\r\nkorisničko ime: [user:account-name]\r\nlozinka: Lozinka koju ste postavili na gornjem linku\r\n\r\n--  [site:name] tim."
+  subject: 'Detalji naloga [user:display-name] na [site:name] (odobren)'
+status_blocked:
+  body: "[user:display-name],\r\n\r\nVaš nalog na sajtu [site:name] je blokiran.\r\n\r\n--  [site:name] tim"
+  subject: 'Detalji naloga [user:display-name] na [site:name] (blokiran)'
+status_canceled:
+  body: "[user:display-name],\r\n\r\nVaš nalog na sajtu [site:name] je obrisan.\r\n\r\n--  [site:name] tim."
+  subject: 'Detalji naloga [user:display-name] na [site:name] (obrisan)'

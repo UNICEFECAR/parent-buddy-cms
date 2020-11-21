@@ -1,0 +1,33 @@
+label: 'Naslovna strana'
+description: 'Sav sadržaj promovisan na naslovnu stranu'
+display:
+  default:
+    display_options:
+      empty:
+        area_text_custom:
+          content: "Još nije kreiran sadržaj naslovne strane.\r\n\r\nPratite <a target=\"_blank\" href=\"https://www.drupal.org/docs/user_guide/en/index.html\">Uputstvo za Upotrebu</a> kako biste počeči da gradite vašu veb stranicu."
+        title:
+          title: 'Dobro došli na [site:name]'
+      exposed_form:
+        options:
+          submit_button: Primeni
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+          tags:
+            previous: '‹ Prethodni'
+            next: 'Sledeći ›'
+            first: '« Prvi'
+            last: 'Poslednji »'
+    display_title: Glavni
+  feed_1:
+    display_title: Izvor
+  page_1:
+    display_title: Strana

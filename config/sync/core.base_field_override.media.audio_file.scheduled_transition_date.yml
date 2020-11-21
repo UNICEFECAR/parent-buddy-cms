@@ -1,0 +1,20 @@
+uuid: b84b8b48-ae58-41a4-81b6-47ff86634caa
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio_file
+  module:
+    - datetime
+id: media.audio_file.scheduled_transition_date
+field_name: scheduled_transition_date
+entity_type: media
+bundle: audio_file
+label: 'Scheduled transition date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

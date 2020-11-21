@@ -1,0 +1,14 @@
+uuid: 3ed60d13-e992-4815-93cd-b5dcc08bc461
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.video_article_reviewer
+  module:
+    - user
+id: user_add_role_action.video_article_reviewer
+label: 'Add the Video Article reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: video_article_reviewer

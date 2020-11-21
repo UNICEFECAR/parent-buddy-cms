@@ -1,0 +1,18 @@
+uuid: ca1ee7a8-18b3-48b3-b257-c43802a1709b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.google_map
+id: block_content.google_map.metatag
+field_name: metatag
+entity_type: block_content
+bundle: google_map
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

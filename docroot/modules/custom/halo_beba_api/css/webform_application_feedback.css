@@ -1,0 +1,80 @@
+
+textarea.form-textarea,
+input.form-text,
+div.form-type-webform-likert th {
+  background-color: #F3F3F3 !important;
+  color: #8C8C8C !important;
+}
+
+header.content-header {
+  background-color: transparent !important;
+}
+
+div.messages {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  color: #000000 !important;
+  background-image: none !important;
+  font-size: 1.3em !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-weight: bold;
+}
+
+div.js-form-wrapper label {
+  cursor: auto;
+  font-weight: normal;
+  display: block;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+}
+
+div.webform-message,
+div.form-type-checkbox,
+div.form-type-textfield,
+div.form-type-textarea,
+div.form-type-webform-likert,
+div.form-type-select,
+fieldset.webform-type-checkboxes,
+fieldset.webform-type-radios,
+hr.webform-horizontal-rule,
+label {
+  margin-bottom: 30px;
+}
+
+div.webform-message label,
+div.form-type-textfield label,
+div.form-type-textarea label,
+div.form-type-webform-likert > label,
+fieldset.webform-type-checkboxes span.fieldset-legend,
+fieldset.webform-type-radios span.fieldset-legend,
+div.form-type-select label {
+  font-size: 1.2em !important;
+}
+
+textarea.form-textarea {
+  color: #000000 !important;
+  font-size: 0.9em !important;
+  padding: 10px !important;
+  border-radius: 25px !important;
+  outline: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: none !important;
+}
+
+div.form-type-textarea div.webform-element-description {
+  margin-bottom: 5px !important; ;
+}
+
+input.form-submit {
+  box-shadow: none !important;
+  border-color: white !important;
+  background-color: #AA40BF !important;
+  background-image: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 1.1em !important;
+  border-radius: 10px !important;
+  padding: 10px !important;
+}

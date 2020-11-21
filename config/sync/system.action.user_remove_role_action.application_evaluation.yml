@@ -1,0 +1,14 @@
+uuid: f19f04e2-bb52-46d3-889e-857ca51e9d40
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.application_evaluation
+  module:
+    - user
+id: user_remove_role_action.application_evaluation
+label: 'Remove the Application Evaluation role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: application_evaluation

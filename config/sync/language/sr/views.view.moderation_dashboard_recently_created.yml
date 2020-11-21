@@ -1,0 +1,50 @@
+label: 'Moderacijska Tabla - Nedavno Kreirani'
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Primeni
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+      fields:
+        title:
+          separator: ','
+        created:
+          label: Kreirano
+          separator: ','
+      title: 'Moderacijska Tabla - Nedavno Kreirani'
+      empty:
+        area_text_custom:
+          content: 'Nepostoji sadržaj koji je nedavno kreiran.'
+  block_1:
+    display_title: 'Nedavno kreirano'
+    display_options:
+      title: 'Nedavno kreirano'
+  block_2:
+    display_title: 'Sadržaji koji ste vi kreirali'
+    display_options:
+      title: 'Sadržaji koji ste vi kreirali'
+      empty:
+        area_text_custom:
+          content: 'Nije pronađen nijedan sadržaj.'
+      arguments:
+        uid:
+          exception:
+            title: Sve
+        'null':
+          admin_label: 'Trenutni korisnik'
+          exception:
+            title: Sve

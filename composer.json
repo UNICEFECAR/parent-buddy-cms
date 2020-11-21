@@ -1,0 +1,113 @@
+{
+    "name": "acquia/lightning-project",
+    "type": "project",
+    "description": "Project template for Drupal 8 sites built with the Lightning distribution.",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "acquia/lightning": "^4.0",
+        "cweagans/composer-patches": "^1.6.0",
+        "drupal/admin_toolbar": "2.x-dev",
+        "drupal/core-composer-scaffold": "*",
+        "drupal/faq": "1.x-dev",
+        "drupal/module_filter": "^3.1",
+        "drupal/restui": "^1.17",
+        "oomphinc/composer-installers-extender": "^1.1",
+        "drupal/openapi_rest": "^2.0@RC",
+        "drupal/views_bulk_operations": "^3.6",
+        "drupal/memcache": "^2.2",
+        "drupal/taxonomy_access_fix": "^2.7",
+        "drupal/field_permissions": "^1.0@RC",
+        "drupal/notification": "^1.0",
+        "drupal/ckwordcount": "^1.0",
+        "drupal/imageapi_optimize": "^4.0",
+        "drupal/imageapi_optimize_resmushit": "^2.0",
+        "drupal/webform": "6.x-dev",
+        "wikimedia/composer-merge-plugin": "^1.4",
+        "drupal/honeypot": "^2.0",
+        "drupal/queue_ui": "^2.2",
+        "drupal/acquia_connector": "^1.22",
+        "composer/installers": "^1.9",
+        "mnsami/composer-custom-directory-installer": "^2.0"
+    },
+    "require-dev": {
+    },
+    "config": {
+        "process-timeout": 0
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": true,
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "docroot/"
+            }
+        },
+        "enable-patching": true,
+        "installer-paths": {
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "w8tcha/ckeditor-wordcount-plugin",
+                "swagger-api/swagger-ui",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/core": {
+                "2949017 - Add Delete any files permission": "https://www.drupal.org/files/issues/2019-12-12/2949017-59.patch"
+            }
+        },
+        "patches-ignore": {
+            "drupal/lightning_core": {
+                "drupal/core": {
+                    "2949017 - Add Delete any files permission": "https://www.drupal.org/files/issues/2019-12-12/2949017-59.patch"
+                }
+            }
+        },
+        "merge-plugin": {
+            "include": [
+                "docroot/modules/contrib/webform/composer.libraries.json"
+            ]
+        }
+    },
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "assets": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-create-project-cmd": "rm -r -f .travis.yml behat.yml .travis-ci",
+        "quick-start": [
+            "composer install",
+            "php docroot/core/scripts/drupal quick-start lightning --no-interaction"
+        ]
+    }
+}

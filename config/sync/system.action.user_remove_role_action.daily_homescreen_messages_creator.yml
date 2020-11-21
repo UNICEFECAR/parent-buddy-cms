@@ -1,0 +1,14 @@
+uuid: 59be04c1-1934-41a5-81a2-96c287e2b3d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.daily_homescreen_messages_creator
+  module:
+    - user
+id: user_remove_role_action.daily_homescreen_messages_creator
+label: 'Remove the Daily Homescreen Messages creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: daily_homescreen_messages_creator

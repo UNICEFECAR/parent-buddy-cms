@@ -1,0 +1,23 @@
+uuid: baec03af-ce77-4c67-b14e-9fb333ae6887
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: 'Role that will have access to Field that will be used to mark Australian Articles.'
+id: manage_australian_articles
+label: 'Manage Australian Articles'
+weight: 0
+is_admin: null
+permissions:
+  - 'access private fields'
+  - 'create field_australian_article'
+  - 'edit field_australian_article'
+  - 'edit own field_australian_article'
+  - 'view field_australian_article'
+  - 'view own field_australian_article'
+  - 'view terms in categories'
+  - 'view terms in keywords'
+  - 'view terms in predefined_tags'

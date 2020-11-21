@@ -1,0 +1,14 @@
+uuid: 09be839f-8783-4f25-8442-854392180a14
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.daily_homescreen_messages_reviewer
+  module:
+    - user
+id: user_remove_role_action.daily_homescreen_messages_reviewer
+label: 'Remove the Daily Homescreen Messages reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: daily_homescreen_messages_reviewer

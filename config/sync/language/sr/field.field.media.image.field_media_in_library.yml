@@ -1,0 +1,4 @@
+label: 'Prikaži u medijskoj biblioteci'
+settings:
+  on_label: 'Prikazano u medijskoj biblioteci'
+  off_label: 'Sakriveno u medijskoj biblioteci'

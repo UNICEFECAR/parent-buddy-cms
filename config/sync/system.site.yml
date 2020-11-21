@@ -1,0 +1,14 @@
+uuid: 09c2135b-2de0-477b-a730-7ed9e648d8a2
+name: 'ECARO Parenting App'
+mail: admin@parentbuddyapp.org
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /front-page
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

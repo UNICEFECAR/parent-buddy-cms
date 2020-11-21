@@ -1,0 +1,29 @@
+uuid: e92e8148-33ff-4d6b-903f-42d99e21be1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_articles
+    - node.type.article
+    - node.type.video_article
+id: node.video_article.field_related_articles
+field_name: field_related_articles
+entity_type: node
+bundle: video_article
+label: 'Related Articles'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      video_article: video_article
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: article
+field_type: entity_reference

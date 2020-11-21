@@ -1,0 +1,20 @@
+label: 'Ko su novi korisnici'
+description: 'Prikaži listu najnovijih korisničkih naloga na veb stranici.'
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Primeni
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      title: 'Ko su novi korisnici'
+  block_1:
+    display_title: 'Ko su novi korisnici'
+    display_options:
+      display_description: 'Lista novih korisnika'
+      block_description: 'Ko su novi korisnici'
+      block_category: Korisnik

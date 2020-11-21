@@ -1,0 +1,4 @@
+label: 'Moderacijska Tabla'
+parameters:
+  user:
+    label: Korisnik

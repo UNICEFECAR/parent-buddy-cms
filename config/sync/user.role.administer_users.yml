@@ -1,0 +1,21 @@
+uuid: 401170a6-658b-406a-82c3-797b76b7e121
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: 'Used to allow REST API to create and verify Users of the Site.'
+id: administer_users
+label: 'Administer Users'
+weight: 2
+is_admin: null
+permissions:
+  - 'administer users'
+  - 'restful get user_delete_resource'
+  - 'restful get user_reset_password_resource'
+  - 'restful get user_validate_resource'
+  - 'view terms in categories'
+  - 'view terms in keywords'
+  - 'view terms in predefined_tags'

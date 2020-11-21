@@ -1,0 +1,14 @@
+uuid: f4f0a645-e679-4c8c-af38-f579b50e85bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.video_article_creator
+  module:
+    - user
+id: user_remove_role_action.video_article_creator
+label: 'Remove the Video Article creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: video_article_creator

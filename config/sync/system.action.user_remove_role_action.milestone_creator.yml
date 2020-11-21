@@ -1,0 +1,14 @@
+uuid: f6212764-d673-4f54-8121-23ce3dec3703
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.milestone_creator
+  module:
+    - user
+id: user_remove_role_action.milestone_creator
+label: 'Remove the Milestone creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: milestone_creator

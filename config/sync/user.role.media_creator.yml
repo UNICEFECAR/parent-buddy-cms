@@ -1,0 +1,39 @@
+uuid: eaacf504-fa52-492e-97c8-afc8532cf1fe
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8J2t5AXYOAkiBwYiWFZtw3ZsBn2IiRHQIVfj58gH3II
+id: media_creator
+label: 'Media creator'
+weight: -12
+is_admin: false
+permissions:
+  - 'access ckeditor_media_browser entity browser pages'
+  - 'access files overview'
+  - 'access image_browser entity browser pages'
+  - 'access media overview'
+  - 'access media_browser entity browser pages'
+  - 'access toolbar'
+  - 'create image media'
+  - 'create video media'
+  - 'delete any files'
+  - 'delete any image media'
+  - 'delete any media'
+  - 'delete any video media'
+  - 'delete files'
+  - 'delete media'
+  - 'delete own image media'
+  - 'delete own video media'
+  - 'dropzone upload files'
+  - 'edit any image media'
+  - 'edit any video media'
+  - 'edit own image media'
+  - 'edit own video media'
+  - 'update any media'
+  - 'update media'
+  - 'view all media revisions'
+  - 'view own unpublished media'
+  - 'view terms in categories'
+  - 'view terms in keywords'
+  - 'view terms in predefined_tags'

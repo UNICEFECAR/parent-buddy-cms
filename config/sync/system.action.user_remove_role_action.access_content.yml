@@ -1,0 +1,14 @@
+uuid: dbc98834-2134-4d23-9c6f-b114d7b19362
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.access_content
+  module:
+    - user
+id: user_remove_role_action.access_content
+label: 'Remove the Access Content role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: access_content

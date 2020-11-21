@@ -1,0 +1,18 @@
+uuid: 3aa4afb6-3763-4833-85b5-a23fb22bef9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - halo_beba_api
+id: list_vocabulary_resource
+plugin_id: list_vocabulary_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+  authentication:
+    - basic_auth

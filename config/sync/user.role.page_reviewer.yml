@@ -1,0 +1,41 @@
+uuid: 19028d07-13b2-4e1c-9978-eccb0c5fcc6d
+langcode: en
+status: true
+dependencies: {  }
+id: page_reviewer
+label: 'Basic page reviewer'
+weight: 8
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'administer content translation'
+  - 'create content translations'
+  - 'create page content'
+  - 'delete all revisions'
+  - 'delete any page content'
+  - 'delete content translations'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'edit any page content'
+  - 'edit own page content'
+  - 'revert all revisions'
+  - 'revert page revisions'
+  - 'translate any entity'
+  - 'update content translations'
+  - 'use editorial transition archive'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation dashboard'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view terms in categories'
+  - 'view terms in keywords'
+  - 'view terms in predefined_tags'

@@ -1,0 +1,22 @@
+uuid: 151c18ca-01c3-4cab-8cc4-7997e38a6cd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.google_map
+id: block_content.google_map.status
+field_name: status
+entity_type: block_content
+bundle: google_map
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,18 @@
+uuid: d9107314-3989-40a3-9dd8-91cffc8efc45
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - halo_beba_api
+id: user_validate_resource
+plugin_id: user_validate_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+  authentication:
+    - basic_auth

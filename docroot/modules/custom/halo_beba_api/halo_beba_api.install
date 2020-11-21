@@ -1,0 +1,60 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Implements hook_schema().
+ */
+function halo_beba_api_schema() {
+  $schema['australian_articles_data'] = array(
+    'description' => 'Australian Articles Data.',
+    'fields'      => array(
+      'id'               => array('type' => 'serial', 'size' => 'normal', 'not null' => TRUE, 'unsigned' => TRUE),
+      'category'         => array('type' => 'varchar', 'length' => 64, 'not null' => TRUE),
+      'finally_selected' => array('type' => 'int', 'size' => 'tiny', 'not null' => FALSE, 'default'  => 0),
+      'article_title'    => array('type' => 'varchar', 'length' => 256, 'not null' => TRUE),
+      'article_link'     => array('type' => 'varchar', 'length' => 256, 'not null' => TRUE),
+      'child_age'        => array('type' => 'varchar', 'length' => 128, 'not null' => FALSE),
+      'child_gender'     => array('type' => 'varchar', 'length' => 128, 'not null' => FALSE),
+      'parent_gender'    => array('type' => 'varchar', 'length' => 128, 'not null' => FALSE),
+      'season'           => array('type' => 'varchar', 'length' => 128, 'not null' => FALSE),
+      'tag_1'            => array('type' => 'varchar', 'length' => 128, 'not null' => FALSE),
+      'tag_2'            => array('type' => 'varchar', 'length' => 128, 'not null' => FALSE),
+      'tag_3'            => array('type' => 'varchar', 'length' => 128, 'not null' => FALSE),
+      'processed'        => array('type' => 'int', 'size' => 'tiny', 'not null' => FALSE, 'default'  => 0),
+    ),
+    'primary key' => array('id'),
+    'indexes'     => array(
+      'processed' => array('processed'),
+    ),
+  );
+
+  $schema['halo_beba_api_variables'] = array(
+    'description' => 'Halo Beba API Variables',
+    'fields'      => array(
+      'key'  => array('type' => 'varchar', 'length' => 128, 'not null' => TRUE),
+      'data' => array('type' => 'blob', 'size' => 'big', 'not null' => TRUE),
+    ),
+    'primary key' => array('key'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Adding database table that will hold data for Australian Articles
+ */
+function halo_beba_api_update_8001() {
+  $module_schemas = halo_beba_api_schema();
+
+  Database::getConnection()->schema()->createTable('australian_articles_data', $module_schemas['australian_articles_data']);
+}
+
+/**
+ * Adding database table that will hold data for Halo Beba API Variables
+ */
+function halo_beba_api_update_8002() {
+  $module_schemas = halo_beba_api_schema();
+
+  Database::getConnection()->schema()->createTable('halo_beba_api_variables', $module_schemas['halo_beba_api_variables']);
+}

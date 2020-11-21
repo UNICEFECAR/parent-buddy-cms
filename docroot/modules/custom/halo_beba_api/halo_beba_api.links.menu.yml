@@ -1,0 +1,5 @@
+halo_beba_api.administration_page:
+  title: 'Halo Beba API'
+  route_name: halo_beba_api.administration_page
+  parent: system.admin
+  weight: -15

@@ -1,0 +1,28 @@
+title: 'Frequently Asked Questions'
+description: ''
+custom_breadcrumbs: true
+display: hide_answer
+question_listing: ul
+qa_mark: 0
+question_label: 'Q:'
+answer_label: 'A:'
+question_length: long
+question_long_form: 0
+hide_qa_accordion: 1
+show_expand_all: 0
+use_teaser: 0
+back_to_top: 'Back to Top'
+disable_node_links: 0
+default_sorting: DESC
+use_categories: false
+category_display: categories_inline
+category_listing: ul
+category_hide_qa_accordion: false
+count: false
+answer_category_name: false
+group_questions_top: false
+hide_child_terms: false
+show_term_page_children: false
+omit_vocabulary: {  }
+_core:
+  default_config_hash: SQxxJIZXuKPvJBBY6_EQCM940iKYgW6QVES9iN4s5h4

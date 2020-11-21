@@ -1,0 +1,5 @@
+services:
+  halo_beba_api.route_subscriber:
+    class: Drupal\halo_beba_api\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,37 @@
+uuid: 246f6c1d-6940-4941-8249-0d4a74b2bfe2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.milestone.body
+    - field.field.node.milestone.field_content_predefined_tags
+    - field.field.node.milestone.field_related_articles
+    - node.type.milestone
+  module:
+    - text
+    - user
+id: node.milestone.teaser
+targetEntityType: node
+bundle: milestone
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  field_content_predefined_tags: true
+  field_related_articles: true
+  langcode: true
+  search_api_excerpt: true

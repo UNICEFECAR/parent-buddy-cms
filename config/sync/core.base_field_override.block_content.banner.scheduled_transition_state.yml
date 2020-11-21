@@ -1,0 +1,18 @@
+uuid: 53ad62fa-3c0b-478f-a302-bbc0317094bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+id: block_content.banner.scheduled_transition_state
+field_name: scheduled_transition_state
+entity_type: block_content
+bundle: banner
+label: 'Scheduled transition state'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

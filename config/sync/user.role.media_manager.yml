@@ -1,0 +1,40 @@
+uuid: e7cce382-1c1b-49df-a90b-329b8261da4b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: L47HI71RjV8g6EyXHqdUuAOtEFv7iUxYDREF-OSBMUE
+id: media_manager
+label: 'Media manager'
+weight: -11
+is_admin: false
+permissions:
+  - 'access ckeditor_media_browser entity browser pages'
+  - 'access files overview'
+  - 'access image_browser entity browser pages'
+  - 'access media overview'
+  - 'access media_browser entity browser pages'
+  - 'access toolbar'
+  - 'administer media bundles'
+  - 'create image media'
+  - 'create video media'
+  - 'delete any files'
+  - 'delete any image media'
+  - 'delete any media'
+  - 'delete any video media'
+  - 'delete files'
+  - 'delete media'
+  - 'delete own image media'
+  - 'delete own video media'
+  - 'dropzone upload files'
+  - 'edit any image media'
+  - 'edit any video media'
+  - 'edit own image media'
+  - 'edit own video media'
+  - 'update any media'
+  - 'update media'
+  - 'view all media revisions'
+  - 'view own unpublished media'
+  - 'view terms in categories'
+  - 'view terms in keywords'
+  - 'view terms in predefined_tags'

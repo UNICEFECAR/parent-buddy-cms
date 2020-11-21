@@ -1,0 +1,8 @@
+uuid: f39c1af8-f95e-4574-a8ac-c5febf602d2f
+langcode: en
+status: true
+dependencies: {  }
+name: Categories
+vid: categories
+description: 'Used to group Content.'
+weight: 0

@@ -1,0 +1,22 @@
+uuid: 9ae09008-5d73-4f5a-b5f4-e9e5420c69d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.tweet
+id: media.tweet.status
+field_name: status
+entity_type: media
+bundle: tweet
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

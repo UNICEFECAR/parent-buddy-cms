@@ -1,0 +1,75 @@
+display:
+  default:
+    display_options:
+      fields:
+        moderation_state:
+          admin_label: 'Stanje objave'
+          label: 'Stanje objave'
+        langcode:
+          label: Jezik
+        default_langcode:
+          label: 'Podrazumevani jezik'
+          settings:
+            format_custom_true: Da
+            format_custom_false: Ne
+        field_content_category:
+          label: Kategorija
+        title:
+          label: Naslov
+        type:
+          label: 'Tip sadržaja'
+          separator: ','
+        name:
+          label: Аutor
+        changed:
+          label: Ažuriran
+        operations:
+          label: Операције
+      filters:
+        moderation_state:
+          expose:
+            label: 'Stanje objave'
+        field_content_category_target_id:
+          expose:
+            label: Kategorija
+        field_content_predefined_tags_target_id:
+          expose:
+            label: 'Predefinisani Tagovi'
+        title:
+          expose:
+            label: Naslov
+        type:
+          expose:
+            label: 'Tip sadržaja'
+        langcode:
+          expose:
+            label: Језик
+      exposed_form:
+        options:
+          submit_button: Filtriraj
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          tags:
+            previous: '‹ Prethodni'
+            next: 'Sledeći ›'
+            first: '« Prvi'
+            last: 'Poslednji »'
+      title: Sadržaj
+      empty:
+        area_text_custom:
+          content: 'Sadržaj nije dostupan.'
+    display_title: Glavni
+  page_1:
+    display_options:
+      menu:
+        title: Sadržaj
+      tab_options:
+        title: Sadržaj
+        description: 'Pronađite i upravljajte sadržajem'
+    display_title: Strana
+label: Sadržaj
+description: 'Pronađite i upravljajte sadržajem.'

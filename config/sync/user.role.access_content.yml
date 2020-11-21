@@ -1,0 +1,27 @@
+uuid: cec14910-f07e-4e4f-8f41-f07f4f63058f
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: 'Used to allow REST API to access Content of the Site.'
+id: access_content
+label: 'Access Content'
+weight: 6
+is_admin: null
+permissions:
+  - 'restful get list_basic_page_resource'
+  - 'restful get list_content_resource'
+  - 'restful get list_daily_homescreen_message'
+  - 'restful get list_milestone_resource'
+  - 'restful get list_taxonomy_resource'
+  - 'restful get list_vocabulary_resource'
+  - 'restful get list_webform_resource'
+  - 'restful get variable_delete_resource'
+  - 'restful get variable_get_resource'
+  - 'restful post variable_set_resource'
+  - 'view terms in categories'
+  - 'view terms in keywords'
+  - 'view terms in predefined_tags'

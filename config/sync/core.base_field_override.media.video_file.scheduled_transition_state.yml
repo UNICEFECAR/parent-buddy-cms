@@ -1,0 +1,18 @@
+uuid: e9fe9984-2a67-4c85-abe4-f0f1d3a7cf72
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.video_file
+id: media.video_file.scheduled_transition_state
+field_name: scheduled_transition_state
+entity_type: media
+bundle: video_file
+label: 'Scheduled transition state'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

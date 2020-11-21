@@ -1,0 +1,14 @@
+uuid: 480dc126-2935-43bb-ad20-55ae7fa6c897
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.milestone_reviewer
+  module:
+    - user
+id: user_add_role_action.milestone_reviewer
+label: 'Add the Milestone reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: milestone_reviewer

@@ -1,0 +1,18 @@
+uuid: 4d659b15-1c5d-4163-b1a7-dae53723cd35
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.predefined_tags
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '1'
+id: taxonomy_term.predefined_tags
+target_entity_type_id: taxonomy_term
+target_bundle: predefined_tags
+default_langcode: authors_default
+language_alterable: false

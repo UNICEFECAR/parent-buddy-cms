@@ -1,0 +1,18 @@
+uuid: 997b27fe-523a-4148-b9ea-e16137889b68
+langcode: en
+status: true
+dependencies:
+  module:
+    - consumers
+id: consumer.consumer.metatag
+field_name: metatag
+entity_type: consumer
+bundle: consumer
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

@@ -1,0 +1,48 @@
+uuid: fe194591-47c1-41f4-a7ad-c77540350134
+langcode: en
+status: true
+dependencies: {  }
+id: milestone_creator
+label: 'Milestone creator'
+weight: -4
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access ckeditor_media_browser entity browser pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access media_browser entity browser pages'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer content translation'
+  - 'create content translations'
+  - 'create milestone content'
+  - 'delete all revisions'
+  - 'delete any milestone content'
+  - 'delete content translations'
+  - 'delete milestone revisions'
+  - 'delete own milestone content'
+  - 'edit any milestone content'
+  - 'edit own milestone content'
+  - 'edit terms in predefined_tags'
+  - 'reorder terms in predefined_tags'
+  - 'revert all revisions'
+  - 'revert milestone revisions'
+  - 'translate any entity'
+  - 'update content translations'
+  - 'use editorial transition archive'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation dashboard'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view milestone revisions'
+  - 'view own unpublished content'
+  - 'view terms in categories'
+  - 'view terms in keywords'
+  - 'view terms in predefined_tags'

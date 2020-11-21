@@ -1,0 +1,4 @@
+label: 'Postavi na naslovnu stranu'
+settings:
+  on_label: Uključeno
+  off_label: Isključeno

@@ -1,0 +1,14 @@
+uuid: 30ff0622-de1c-4b01-8c00-b747754b4074
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.video_article_creator
+  module:
+    - user
+id: user_add_role_action.video_article_creator
+label: 'Add the Video Article creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: video_article_creator

@@ -1,0 +1,18 @@
+uuid: 9cce5c92-bcf8-41af-8363-8446b935be7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+id: block_content.banner.metatag
+field_name: metatag
+entity_type: block_content
+bundle: banner
+label: Metatags
+description: 'The meta tags for the entity.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: map

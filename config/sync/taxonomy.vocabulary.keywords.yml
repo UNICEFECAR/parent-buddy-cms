@@ -1,0 +1,8 @@
+uuid: f270975b-6d9d-46bc-b597-fccf0c5b739b
+langcode: en
+status: true
+dependencies: {  }
+name: Keywords
+vid: keywords
+description: 'Used to filter and connect Content.'
+weight: 0

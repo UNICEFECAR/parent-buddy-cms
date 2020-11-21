@@ -1,0 +1,22 @@
+uuid: 86fec683-4526-47c9-9ac3-5bab80d91266
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.daily_homescreen_messages
+  module:
+    - user
+id: node.daily_homescreen_messages.default
+targetEntityType: node
+bundle: daily_homescreen_messages
+mode: default
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  langcode: true
+  search_api_excerpt: true

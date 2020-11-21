@@ -1,0 +1,30 @@
+label: 'Blok "Ko je onlajn?"'
+description: 'Prikazuje korisnička imena najnovijih korisnika i ukupan broj aktivnih korisnika.'
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Primeni
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      filters:
+        access:
+          expose:
+            label: 'Poslednji pristup'
+            description: 'Korisnik se smatra da je onlajn nakon što je prošlo ovo vreme nakon što je poslednji put pregledao stranicu.'
+      title: 'Ko je online?'
+      header:
+        result:
+          content: 'Trenutno je @total korisnika onlajn.'
+      empty:
+        area_text_custom:
+          content: 'Trenutno je 0 korisnika onlajn.'
+  who_s_online_block:
+    display_title: 'Ko je online?'
+    display_options:
+      block_description: 'Ko je online?'
+      display_description: 'Lista korisnika koji su trenutno ulogovani.'

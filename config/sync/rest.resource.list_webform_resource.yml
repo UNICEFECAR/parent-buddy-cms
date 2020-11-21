@@ -1,0 +1,18 @@
+uuid: be9b8461-1ea9-4eb4-9426-b85845637321
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - halo_beba_api
+id: list_webform_resource
+plugin_id: list_webform_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+  authentication:
+    - basic_auth

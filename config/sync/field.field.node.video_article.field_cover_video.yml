@@ -1,0 +1,28 @@
+uuid: bcde3e9c-7ccb-4774-9e7c-12a5c5251688
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cover_video
+    - media.type.video
+    - node.type.video_article
+id: node.video_article.field_cover_video
+field_name: field_cover_video
+entity_type: node
+bundle: video_article
+label: 'Cover Video'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

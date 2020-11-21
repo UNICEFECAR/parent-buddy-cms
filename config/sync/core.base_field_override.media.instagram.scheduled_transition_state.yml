@@ -1,0 +1,18 @@
+uuid: a4126952-a279-4870-b3df-e4a85e17c599
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.instagram
+id: media.instagram.scheduled_transition_state
+field_name: scheduled_transition_state
+entity_type: media
+bundle: instagram
+label: 'Scheduled transition state'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

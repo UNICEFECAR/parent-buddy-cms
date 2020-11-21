@@ -1,0 +1,16 @@
+uuid: 173531ac-b5eb-42be-b77c-57493d86bffb
+langcode: en
+status: true
+dependencies: {  }
+name: halobeba_style
+label: 'HaloBeba Style'
+effects:
+  f0e95c99-2f87-48bf-9d4d-f38860711724:
+    uuid: f0e95c99-2f87-48bf-9d4d-f38860711724
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: 800
+      upscale: false
+pipeline: resmush_it

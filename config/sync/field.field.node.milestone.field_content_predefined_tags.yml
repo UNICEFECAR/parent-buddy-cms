@@ -1,0 +1,29 @@
+uuid: 2b4fa496-e6a2-47fe-afe4-4386fb9af8ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_predefined_tags
+    - node.type.milestone
+    - taxonomy.vocabulary.predefined_tags
+id: node.milestone.field_content_predefined_tags
+field_name: field_content_predefined_tags
+entity_type: node
+bundle: milestone
+label: 'Predefined Tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      predefined_tags: predefined_tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,18 @@
+uuid: 3bc0ee20-a87e-44b1-ab40-0d86fc4daebf
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - halo_beba_api
+id: list_content_resource
+plugin_id: list_content_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+  authentication:
+    - basic_auth

@@ -1,0 +1,20 @@
+uuid: 5e84970c-1c5c-4973-927d-ebddf4b80403
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.google_map
+  module:
+    - datetime
+id: block_content.google_map.scheduled_transition_date
+field_name: scheduled_transition_date
+entity_type: block_content
+bundle: google_map
+label: 'Scheduled transition date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

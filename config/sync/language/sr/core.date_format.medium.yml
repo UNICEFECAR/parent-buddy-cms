@@ -1,0 +1,2 @@
+label: 'Podrazumevani srednji tip datuma'
+pattern: 'D, d-m-Y - H:i'

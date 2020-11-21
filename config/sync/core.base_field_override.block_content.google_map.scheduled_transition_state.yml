@@ -1,0 +1,18 @@
+uuid: e2c0ac26-4fba-49c9-a808-282192c16530
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.google_map
+id: block_content.google_map.scheduled_transition_state
+field_name: scheduled_transition_state
+entity_type: block_content
+bundle: google_map
+label: 'Scheduled transition state'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

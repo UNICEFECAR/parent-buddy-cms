@@ -1,0 +1,14 @@
+uuid: a31b2fda-59b7-4027-b288-2bd74e2df65e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.access_content
+  module:
+    - user
+id: user_add_role_action.access_content
+label: 'Add the Access Content role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: access_content

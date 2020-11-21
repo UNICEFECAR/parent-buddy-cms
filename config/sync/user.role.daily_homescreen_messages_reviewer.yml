@@ -1,0 +1,41 @@
+uuid: 2e72f780-9f1b-48d8-a95b-1f92779e7c2c
+langcode: en
+status: true
+dependencies: {  }
+id: daily_homescreen_messages_reviewer
+label: 'Daily Homescreen Messages reviewer'
+weight: -1
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'administer content translation'
+  - 'create content translations'
+  - 'create daily_homescreen_messages content'
+  - 'delete all revisions'
+  - 'delete any daily_homescreen_messages content'
+  - 'delete content translations'
+  - 'delete daily_homescreen_messages revisions'
+  - 'delete own daily_homescreen_messages content'
+  - 'edit any daily_homescreen_messages content'
+  - 'edit own daily_homescreen_messages content'
+  - 'revert all revisions'
+  - 'revert daily_homescreen_messages revisions'
+  - 'translate any entity'
+  - 'update content translations'
+  - 'use editorial transition archive'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation dashboard'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view daily_homescreen_messages revisions'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view terms in categories'
+  - 'view terms in keywords'
+  - 'view terms in predefined_tags'

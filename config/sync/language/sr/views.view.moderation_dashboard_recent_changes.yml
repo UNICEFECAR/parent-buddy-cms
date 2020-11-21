@@ -1,0 +1,53 @@
+label: 'Moderacijska Tabla - Skorašnje Promene'
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Primeni
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+      fields:
+        title:
+          separator: ','
+        revision_log:
+          separator: ','
+        revision_uid:
+          separator: ','
+        revision_timestamp:
+          separator: ','
+      title: 'Moderacijska Tabla - Skorašnje Promene'
+      empty:
+        area_text_custom:
+          content: 'Nema sadržaja koji je nedavno ažuriran.'
+  block_1:
+    display_title: 'Skorašnje Promene'
+    display_options:
+      title: 'Skorašnje Promene'
+  block_2:
+    display_title: 'Vaša aktivnost'
+    display_options:
+      arguments:
+        uid:
+          exception:
+            title: Sve
+        'null':
+          admin_label: 'Ulogovani korisnik'
+          exception:
+            title: Sve
+      title: 'Vaša aktivnost'
+      empty:
+        area_text_custom:
+          content: 'Log aktivnosti je prazan.'

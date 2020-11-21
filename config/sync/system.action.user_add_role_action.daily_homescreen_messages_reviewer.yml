@@ -1,0 +1,14 @@
+uuid: 765a15a0-2ff5-4bf3-ba3c-c3be6aac3b39
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.daily_homescreen_messages_reviewer
+  module:
+    - user
+id: user_add_role_action.daily_homescreen_messages_reviewer
+label: 'Add the Daily Homescreen Messages reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: daily_homescreen_messages_reviewer

@@ -1,0 +1,15 @@
+uuid: 87d51d12-c36c-4932-9cf6-e4bd41ed030e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Anonymous user'
+weight: 4
+is_admin: false
+permissions:
+  - 'access site-wide contact form'
+  - 'view terms in categories'
+  - 'view terms in keywords'
+  - 'view terms in predefined_tags'

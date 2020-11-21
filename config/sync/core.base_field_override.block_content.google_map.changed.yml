@@ -1,0 +1,18 @@
+uuid: 71bbac1c-04e3-477a-b3c6-5418815188dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.google_map
+id: block_content.google_map.changed
+field_name: changed
+entity_type: block_content
+bundle: google_map
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,56 @@
+halo_beba_api.front_page:
+  path: '/front-page'
+  defaults:
+    _title: 'ECARO Parenting App'
+    _controller: '\Drupal\halo_beba_api\Controller\HelperPagesController::FrontPage'
+  requirements:
+    _access: 'TRUE'
+
+halo_beba_api.test_page:
+  path: '/test-page'
+  defaults:
+    _title: 'Test Page'
+    _controller: '\Drupal\halo_beba_api\Controller\HelperPagesController::TestPage'
+  requirements:
+    _permission: 'administer site configuration'
+
+halo_beba_api.process_australian_articles_prepare:
+  path: '/process-australian-articles/prepare'
+  defaults:
+    _title: 'Process Australian Articles Prepare'
+    _form: '\Drupal\halo_beba_api\Form\ProcessAustralianArticlesPrepare'
+  requirements:
+    _permission: 'administer site configuration'
+
+halo_beba_api.process_australian_articles_execute:
+  path: '/process-australian-articles/execute'
+  defaults:
+    _title: 'Process Australian Articles Execute'
+    _form: '\Drupal\halo_beba_api\Form\ProcessAustralianArticlesExecute'
+  requirements:
+    _permission: 'administer site configuration'
+
+halo_beba_api.administration_page:
+  path: '/admin/halo-beba-api'
+  defaults:
+    _title: 'Halo Beba API'
+    _controller: '\Drupal\halo_beba_api\Controller\HaloBebaAdministrationController::AdministrationPage'
+  requirements:
+    _permission: 'administer site configuration'
+
+halo_beba_api.administration_page.import_taxonomy_translations:
+  path: '/admin/halo-beba-api/import-taxonomy-translations'
+  defaults:
+    _title: 'Import Taxonomy Translations'
+    _form: '\Drupal\halo_beba_api\Form\ImportTaxonomyTranslations'
+  requirements:
+    _permission: 'administer site configuration'
+
+halo_beba_api.webform_submission_page:
+  path: '/webform-submission/{langcode}'
+  defaults:
+    _title: 'Webform Submission'
+    _controller: '\Drupal\halo_beba_api\Controller\WebformSubmissionController::WebformSubmissionPage'
+    langcode: 'en'
+  requirements:
+    _access: 'TRUE'

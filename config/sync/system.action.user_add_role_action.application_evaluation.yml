@@ -1,0 +1,14 @@
+uuid: d1da63de-a7b2-48b3-b4fc-24b685c21682
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.application_evaluation
+  module:
+    - user
+id: user_add_role_action.application_evaluation
+label: 'Add the Application Evaluation role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: application_evaluation
