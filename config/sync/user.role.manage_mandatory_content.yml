@@ -1,0 +1,19 @@
+uuid: 1f1cb902-4fd0-4eef-9e2a-4688e867a359
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: 'Role that will have access to Field that will be used to mark Mandatory Articles.'
+id: manage_mandatory_content
+label: 'Manage Mandatory Content'
+weight: 15
+is_admin: null
+permissions:
+  - 'create field_mandatory_content'
+  - 'edit field_mandatory_content'
+  - 'edit own field_mandatory_content'
+  - 'view field_mandatory_content'
+  - 'view own field_mandatory_content'

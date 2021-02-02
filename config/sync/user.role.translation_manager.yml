@@ -1,0 +1,17 @@
+uuid: 8f9b23d5-459e-4101-959c-20ca7539589d
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: translation_manager
+label: 'Translation manager'
+weight: 16
+is_admin: null
+permissions:
+  - 'accept translation jobs'
+  - 'create translation jobs'
+  - 'submit translation jobs'

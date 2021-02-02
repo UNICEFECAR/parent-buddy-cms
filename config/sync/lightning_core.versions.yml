@@ -29,7 +29,7 @@ contextual: 8.8.5
 crop: 2.1.0
 ctools: 3.4.0
 datetime: 8.8.5
-dblog: 8.9.8
+dblog: 8.9.13
 devel: 2.1.0
 devel_entity_updates: 2.0.0
 diff: 1.0.0
@@ -147,6 +147,11 @@ system: 8.8.5
 taxonomy: 8.8.5
 taxonomy_access_fix: 2.7.0
 text: 8.8.5
+tmgmt: 1.11.0
+tmgmt_content: 1.11.0
+tmgmt_file: 1.11.0
+tmgmt_language_combination: 1.11.0
+tmgmt_memsource: 1.11.0
 token: 1.6.0
 toolbar: 8.8.5
 user: 8.8.5

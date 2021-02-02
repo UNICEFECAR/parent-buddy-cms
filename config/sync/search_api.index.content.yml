@@ -39,6 +39,7 @@ field_settings:
         anonymous: anonymous
       view_mode:
         'entity:node':
+          activity: default
           article: default
           daily_homescreen_messages: default
           faq: default
@@ -162,6 +163,7 @@ processor_settings:
       preprocess_index: -6
       preprocess_query: -5
     all_fields: false
+    ignored: ._-
   transliteration:
     fields:
       - label

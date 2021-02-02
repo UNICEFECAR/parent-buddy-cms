@@ -1,0 +1,22 @@
+label: Uređivanje
+type_settings:
+  states:
+    archived:
+      label: Arhivirano
+    draft:
+      label: Nacrt
+    published:
+      label: Objavljeno
+    review:
+      label: 'U pregledu'
+  transitions:
+    archive:
+      label: Arhiva
+    archived_published:
+      label: 'Vrati iz Arhive'
+    create_new_draft:
+      label: 'Napravi novi Nacrt'
+    publish:
+      label: Objavi
+    review:
+      label: 'Pošalji na pregled'

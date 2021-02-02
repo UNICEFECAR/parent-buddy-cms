@@ -3,8 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.activity
     - node.type.article
+    - node.type.daily_homescreen_messages
     - node.type.faq
+    - node.type.milestone
+    - node.type.page
+    - node.type.video_article
+    - node.type.webform
     - taxonomy.vocabulary.categories
     - taxonomy.vocabulary.predefined_tags
     - workflows.workflow.editorial
@@ -603,8 +609,14 @@ display:
           admin_label: ''
           operator: in
           value:
+            activity: activity
             article: article
+            page: page
+            daily_homescreen_messages: daily_homescreen_messages
             faq: faq
+            milestone: milestone
+            video_article: video_article
+            webform: webform
           group: 1
           exposed: true
           expose:
@@ -621,19 +633,37 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_creator: '0'
-              layout_manager: '0'
-              page_reviewer: '0'
-              landing_page_creator: '0'
-              landing_page_reviewer: '0'
               media_creator: '0'
               media_manager: '0'
               faq_creator: '0'
               faq_reviewer: '0'
               article_creator: '0'
               article_reviewer: '0'
+              video_article_creator: '0'
+              video_article_reviewer: '0'
+              milestone_creator: '0'
+              milestone_reviewer: '0'
+              daily_homescreen_messages_creator: '0'
+              daily_homescreen_messages_reviewer: '0'
+              manage_australian_articles: '0'
+              administrator: '0'
+              administer_users: '0'
+              application_user: '0'
+              anonymous: '0'
+              access_content: '0'
+              page_creator: '0'
+              page_reviewer: '0'
+              layout_manager: '0'
+              landing_page_creator: '0'
+              landing_page_reviewer: '0'
+              webform_creator: '0'
+              webform_reviewer: '0'
+              application_evaluation: '0'
+              manage_mandatory_content: '0'
+              translation_manager: '0'
+              translation_reviewer: '0'
+              activity_creator: '0'
+              activity_reviewer: '0'
             reduce: true
             argument: ''
           is_grouped: false
@@ -705,7 +735,23 @@ display:
           operator: in
           value:
             en: en
-            sr: sr
+            al-sq: al-sq
+            bg-bg: bg-bg
+            gr-arb: gr-arb
+            gr-el: gr-el
+            gr-fa: gr-fa
+            xk-sq: xk-sq
+            xk-rs: xk-rs
+            kg-ky: kg-ky
+            kg-ru: kg-ru
+            me-cnr: me-cnr
+            mk-sq: mk-sq
+            mk-mk: mk-mk
+            rs-sr: rs-sr
+            tj-ru: tj-ru
+            tj-tg: tj-tg
+            uz-ru: uz-ru
+            uz-uz: uz-uz
           group: 1
           exposed: true
           expose:
@@ -722,19 +768,33 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_creator: '0'
-              layout_manager: '0'
-              page_reviewer: '0'
-              landing_page_creator: '0'
-              landing_page_reviewer: '0'
               media_creator: '0'
               media_manager: '0'
               faq_creator: '0'
               faq_reviewer: '0'
               article_creator: '0'
               article_reviewer: '0'
+              video_article_creator: '0'
+              video_article_reviewer: '0'
+              milestone_creator: '0'
+              milestone_reviewer: '0'
+              daily_homescreen_messages_creator: '0'
+              daily_homescreen_messages_reviewer: '0'
+              manage_australian_articles: '0'
+              administrator: '0'
+              administer_users: '0'
+              application_user: '0'
+              anonymous: '0'
+              access_content: '0'
+              page_creator: '0'
+              page_reviewer: '0'
+              layout_manager: '0'
+              landing_page_creator: '0'
+              landing_page_reviewer: '0'
+              webform_creator: '0'
+              webform_reviewer: '0'
+              application_evaluation: '0'
+              manage_mandatory_content: '0'
             reduce: true
           is_grouped: false
           group_info:
@@ -908,6 +968,71 @@ display:
           hierarchy: true
           error_message: true
           plugin_id: taxonomy_index_tid
+        field_mandatory_content_value:
+          id: field_mandatory_content_value
+          table: node__field_mandatory_content
+          field: field_mandatory_content_value
+          relationship: nid
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: All
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Mandatory Content'
+            description: ''
+            use_operator: false
+            operator: field_mandatory_content_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_mandatory_content_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              media_creator: '0'
+              media_manager: '0'
+              faq_creator: '0'
+              faq_reviewer: '0'
+              article_creator: '0'
+              article_reviewer: '0'
+              video_article_creator: '0'
+              video_article_reviewer: '0'
+              milestone_creator: '0'
+              milestone_reviewer: '0'
+              daily_homescreen_messages_creator: '0'
+              daily_homescreen_messages_reviewer: '0'
+              manage_australian_articles: '0'
+              administrator: '0'
+              administer_users: '0'
+              application_user: '0'
+              anonymous: '0'
+              access_content: '0'
+              page_creator: '0'
+              page_reviewer: '0'
+              layout_manager: '0'
+              landing_page_creator: '0'
+              landing_page_reviewer: '0'
+              webform_creator: '0'
+              webform_reviewer: '0'
+              application_evaluation: '0'
+              manage_mandatory_content: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
       sorts: {  }
       title: 'Moderated content'
       header: {  }

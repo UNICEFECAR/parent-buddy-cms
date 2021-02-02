@@ -78,11 +78,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  translation:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 4

@@ -27,7 +27,10 @@
         "drupal/queue_ui": "^2.2",
         "drupal/acquia_connector": "^1.22",
         "composer/installers": "^1.9",
-        "mnsami/composer-custom-directory-installer": "^2.0"
+        "mnsami/composer-custom-directory-installer": "^2.0",
+        "ext-curl": "*",
+        "drupal/tmgmt": "^1.11",
+        "drupal/tmgmt_memsource": "^1.10"
     },
     "require-dev": {
     },

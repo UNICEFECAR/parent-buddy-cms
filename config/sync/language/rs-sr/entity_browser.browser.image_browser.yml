@@ -1,0 +1,6 @@
+label: 'Pretraživač slika'
+display_configuration:
+  link_text: 'Izaberite Sliku(e)'
+widgets:
+  44d52e51-9627-43b5-a637-3b0462041d1c:
+    label: Otpremiti

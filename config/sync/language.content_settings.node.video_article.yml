@@ -14,5 +14,5 @@ third_party_settings:
 id: node.video_article
 target_entity_type_id: node
 target_bundle: video_article
-default_langcode: authors_default
-language_alterable: false
+default_langcode: current_interface
+language_alterable: true

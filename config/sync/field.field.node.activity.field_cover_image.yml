@@ -1,0 +1,33 @@
+uuid: e9b37e43-179c-402a-897a-2d6f4bc463a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cover_image
+    - media.type.image
+    - node.type.activity
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
+id: node.activity.field_cover_image
+field_name: field_cover_image
+entity_type: node
+bundle: activity
+label: 'Cover Image'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,34 @@
+uuid: 41758664-08cd-4968-9ed4-405b4d3c5bf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_keywords
+    - node.type.activity
+    - taxonomy.vocabulary.keywords
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
+id: node.activity.field_keywords
+field_name: field_keywords
+entity_type: node
+bundle: activity
+label: Keywords
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      keywords: keywords
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

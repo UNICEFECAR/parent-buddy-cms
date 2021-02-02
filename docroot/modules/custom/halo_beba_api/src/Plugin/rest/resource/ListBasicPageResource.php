@@ -93,6 +93,13 @@ class ListBasicPageResource extends ResourceBase {
 
     $type = 'page';
 
+    // fix until we update the HaloBeba APP to deal with new setting for Serbian language
+    if ($langcode === 'sr') {
+      $langcode_adjusted = 'rs-sr';
+    } else {
+      $langcode_adjusted = $langcode;
+    }
+
     $total = Drupal::entityQuery('node')
                    ->condition('type', $type);
     if (!empty($eid)) {
@@ -118,13 +125,13 @@ class ListBasicPageResource extends ResourceBase {
          * @var Node $node
          */
         foreach ($nodes as $key => $node) {
-          // if current node is in the same language and requested language just use the node
-          if ($node->get('langcode')->value === $langcode) {
+          // if current node is in the same language as requested language use the already loaded node, if not translate it
+          if ($node->get('langcode')->value === $langcode_adjusted) {
             $continue_process = TRUE;
             $translated_node = $node;
-          } elseif($node->hasTranslation($langcode)) {
+          } elseif($node->hasTranslation($langcode_adjusted)) {
             $continue_process = TRUE;
-            $translated_node = $node->getTranslation($langcode);
+            $translated_node = $node->getTranslation($langcode_adjusted);
           } else {
             $continue_process = FALSE;
             $translated_node = new stdClass();
@@ -223,7 +230,6 @@ class ListBasicPageResource extends ResourceBase {
 
             $data[] = $one_entity;
           }
-
         }
 
         if (!empty($data)) {

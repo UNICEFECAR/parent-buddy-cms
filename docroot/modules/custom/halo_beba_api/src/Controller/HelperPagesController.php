@@ -40,6 +40,80 @@ class HelperPagesController extends ControllerBase {
   public function TestPage(Request $request): array {
     $connection = Drupal::database();
 
+    $sql = "
+      SELECT
+        `table_name`
+      FROM INFORMATION_SCHEMA.`COLUMNS` 
+      WHERE table_schema = 'ecaroparentingapppi3xep5h4v'
+        AND `column_name` = 'langcode'
+    ";
+    $sql_query = $connection->query($sql);
+
+    $tables = [];
+    while ($row = $sql_query->fetchField()) {
+      if ($row !== 'locale_file') {
+        $tables[] = $row;
+      }
+    }
+
+    foreach ($tables as $table) {
+      $sql = "UPDATE {$table} SET langcode = 'rs-sr' WHERE langcode = 'sr'";
+      $connection->query($sql);
+    }
+
+
+    $sql = "
+      SELECT
+        `table_name`
+      FROM INFORMATION_SCHEMA.`COLUMNS` 
+      WHERE table_schema = 'ecaroparentingapppi3xep5h4v'
+        AND `column_name` = 'preferred_langcode'
+    ";
+    $sql_query = $connection->query($sql);
+
+    $tables = [];
+    while ($row = $sql_query->fetchField()) {
+      if ($row !== 'locale_file') {
+        $tables[] = $row;
+      }
+    }
+
+    foreach ($tables as $table) {
+      $sql = "UPDATE {$table} SET preferred_langcode = 'rs-sr' WHERE preferred_langcode = 'sr'";
+      $connection->query($sql);
+    }
+
+
+    $sql = "
+      SELECT
+        `table_name`
+      FROM INFORMATION_SCHEMA.`COLUMNS` 
+      WHERE table_schema = 'ecaroparentingapppi3xep5h4v'
+        AND `column_name` = 'content_translation_source'
+    ";
+    $sql_query = $connection->query($sql);
+
+    $tables = [];
+    while ($row = $sql_query->fetchField()) {
+      $tables[] = $row;
+    }
+
+    foreach ($tables as $table) {
+      $sql = "UPDATE {$table} SET content_translation_source = 'rs-sr' WHERE content_translation_source = 'sr'";
+      $connection->query($sql);
+    }
+
+
+    die('updated');
+
+
+
+
+
+
+
+    $connection = Drupal::database();
+
     $sql = $connection->select('file_managed', 'fm');
     $sql->fields('fm', ['fid']);
     $sql_query = $sql->execute();
@@ -106,7 +180,7 @@ class HelperPagesController extends ControllerBase {
          * @var Node $node
          */
         foreach ($nodes as $key => $node) {
-          // if current node is in the same language and requested language just use the node
+          // if current node is in the same language as requested language use the already loaded node, if not translate it
           if ($node->get('langcode')->value === $langcode) {
             $translated_node = $node;
           } else {
@@ -187,7 +261,7 @@ print_r('<pre>');print_r($data);print_r('</pre>');die();
        * @var Node $node
        */
       foreach ($nodes as $key => $node) {
-        // if current node is in the same language and requested language just use the node
+        // if current node is in the same language as requested language use the already loaded node, if not translate it
         if ($node->get('langcode')->value === $langcode) {
           $translated_node = $node;
         } else {
@@ -437,7 +511,7 @@ print_r('<pre>');print_r($data);print_r('</pre>');die();
          * @var Node $node
          */
         foreach ($nodes as $key => $node) {
-          // if current node is in the same language and requested language just use the node
+          // if current node is in the same language as requested language use the already loaded node, if not translate it
           if ($node->get('langcode')->value === $langcode) {
             $translated_node = $node;
           } else {

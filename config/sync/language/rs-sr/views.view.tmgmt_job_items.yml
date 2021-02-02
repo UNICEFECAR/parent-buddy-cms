@@ -1,0 +1,53 @@
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Primeni
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+          tags:
+            previous: '‹ prethodni'
+            next: 'sledeći ›'
+            first: '« prvi'
+            last: 'poslednji »'
+      fields:
+        state:
+          label: Status
+        label:
+          label: Oznaka
+        type:
+          label: Tip
+        word_count:
+          separator: ','
+        tags_count:
+          separator: ','
+        changed:
+          label: Promenjeno
+        operations:
+          label: Операције
+      arguments:
+        tjid:
+          exception:
+            title: Sve
+  checkout:
+    display_options:
+      fields:
+        label:
+          label: Oznaka
+        type:
+          label: Tip
+        word_count:
+          separator: ','
+        changed:
+          label: Promenjeno
+          separator: ','

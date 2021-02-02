@@ -1,0 +1,28 @@
+uuid: c3bf8b77-54f3-4e4b-a013-1dedb1985e4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mandatory_content
+    - node.type.activity
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
+id: node.activity.field_mandatory_content
+field_name: field_mandatory_content
+entity_type: node
+bundle: activity
+label: 'Mandatory Content'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

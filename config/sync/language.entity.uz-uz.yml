@@ -1,0 +1,9 @@
+uuid: b7410301-e040-412e-afdb-34283d57d855
+langcode: en
+status: true
+dependencies: {  }
+id: uz-uz
+label: Uzbekistan-Uzbek
+direction: ltr
+weight: 9
+locked: false

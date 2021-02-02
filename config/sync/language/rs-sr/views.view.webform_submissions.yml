@@ -1,0 +1,124 @@
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Primeni
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Prvi'
+            last: 'Poslednji »'
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+      fields:
+        sid:
+          separator: ','
+        in_draft:
+          separator: ','
+        created:
+          label: Napravljen
+          separator: ','
+        remote_addr:
+          label: 'IP adresa'
+          separator: ','
+        view_webform_submission:
+          label: Операције
+      arguments:
+        in_draft:
+          exception:
+            title: Sve
+  embed_administer:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: Akcija
+        sid:
+          separator: ','
+        in_draft:
+          separator: ','
+        sticky:
+          separator: ','
+        locked:
+          label: Zaključan
+          separator: ','
+        created:
+          label: Napravljen
+          separator: ','
+        completed:
+          separator: ','
+        remote_addr:
+          label: 'IP adresa'
+          separator: ','
+        operations:
+          label: Операције
+      filters:
+        locked:
+          expose:
+            label: Zaključan
+  embed_manage:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: Akcija
+        sid:
+          separator: ','
+        in_draft:
+          separator: ','
+        sticky:
+          separator: ','
+        locked:
+          label: Zaključan
+          separator: ','
+        created:
+          label: Napravljen
+          separator: ','
+        completed:
+          separator: ','
+        remote_addr:
+          label: 'IP adresa'
+          separator: ','
+        view_webform_submission:
+          label: Операције
+        edit_webform_submission:
+          label: Операције
+          text: izmeni
+      filters:
+        locked:
+          expose:
+            label: Zaključan
+  embed_review:
+    display_options:
+      fields:
+        sid:
+          separator: ','
+        in_draft:
+          separator: ','
+        sticky:
+          separator: ','
+        locked:
+          label: Zaključan
+          separator: ','
+        created:
+          label: Napravljen
+          separator: ','
+        completed:
+          separator: ','
+        remote_addr:
+          label: 'IP adresa'
+          separator: ','
+        view_webform_submission:
+          label: Операције
+      filters:
+        locked:
+          expose:
+            label: Zaključan

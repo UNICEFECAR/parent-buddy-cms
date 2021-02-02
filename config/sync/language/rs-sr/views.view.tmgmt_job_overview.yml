@@ -1,0 +1,49 @@
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Primeni
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+          tags:
+            previous: '‹ prethodni'
+            next: 'sledeći ›'
+            first: '« prvi'
+            last: 'poslednji »'
+      fields:
+        state:
+          label: Status
+          separator: ','
+        label:
+          label: Oznaka
+        source_language_1:
+          label: Od
+          separator: ','
+        target_language:
+          label: Ka
+          separator: ','
+        translator:
+          label: Provajder
+        changed:
+          label: Promenjeno
+        operations:
+          label: Операције
+      filters:
+        state:
+          expose:
+            label: Status
+        translator:
+          expose:
+            label: Provajder
+  page_1:
+    display_title: Strana

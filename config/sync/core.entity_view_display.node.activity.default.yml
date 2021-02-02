@@ -1,0 +1,98 @@
+uuid: 2c0a8327-77ec-46fb-b430-256768e67068
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.activity.body
+    - field.field.node.activity.field_content_predefined_tags
+    - field.field.node.activity.field_cover_image
+    - field.field.node.activity.field_equipment
+    - field.field.node.activity.field_keywords
+    - field.field.node.activity.field_mandatory_content
+    - field.field.node.activity.field_references_and_comments
+    - field.field.node.activity.field_related_articles
+    - field.field.node.activity.field_type_of_support
+    - node.type.activity
+  module:
+    - options
+    - text
+    - user
+id: node.activity.default
+targetEntityType: node
+bundle: activity
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_content_predefined_tags:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_cover_image:
+    weight: 2
+    label: above
+    settings:
+      view_mode: media_library
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_equipment:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_keywords:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_mandatory_content:
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_related_articles:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_type_of_support:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  field_references_and_comments: true
+  langcode: true
+  search_api_excerpt: true

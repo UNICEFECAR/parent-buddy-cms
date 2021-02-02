@@ -1,0 +1,18 @@
+label: Paneli
+variant_settings:
+  blocks:
+    810cd29f-e1c6-46ec-9eaa-dec914cfd4f4:
+      label: 'Sadržaj u recenziji'
+      views_label: 'Sadržaj u recenziji'
+    bcc91274-24b8-4755-9bf5-e6f104674898:
+      label: 'Poslednja ažuriranja'
+      views_label: 'Poslednja ažuriranja'
+    1a06173d-634b-4475-a80b-d23a9773083b:
+      label: 'Nedavno kreirano'
+      views_label: 'Nedavno kreirano'
+    6f599e3c-e949-490d-8fee-a467d3094ac9:
+      label: 'Skice sadržaja'
+      views_label: 'Skice sadržaja'
+    e5cd0b52-53b0-4745-be70-85484005ba08:
+      label: 'Aktivnost urednika u poslednjih 30 dana'
+  page_title: 'Moderacijska Tabla'

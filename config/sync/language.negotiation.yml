@@ -4,10 +4,46 @@ url:
   source: path_prefix
   prefixes:
     en: en
-    sr: sr
+    sq: sq
+    ru: ru
+    bg-bg: bg-bg
+    kg-ky: kg-ky
+    kg-ru: kg-ru
+    al-sq: al-sq
+    mk-mk: mk-mk
+    mk-sq: mk-sq
+    tj-tg: tj-tg
+    tj-ru: tj-ru
+    me-cnr: me-cnr
+    xk-sq: xk-sq
+    xk-rs: xk-rs
+    uz-uz: uz-uz
+    uz-ru: uz-ru
+    rs-sr: rs-sr
+    gr-el: gr-el
+    gr-arb: gr-arb
+    gr-fa: gr-fa
   domains:
     en: ''
-    sr: ''
+    sq: ''
+    ru: ''
+    bg-bg: ''
+    kg-ky: ''
+    kg-ru: ''
+    al-sq: ''
+    mk-mk: ''
+    mk-sq: ''
+    tj-tg: ''
+    tj-ru: ''
+    me-cnr: ''
+    xk-sq: ''
+    xk-rs: ''
+    uz-uz: ''
+    uz-ru: ''
+    rs-sr: ''
+    gr-el: ''
+    gr-arb: ''
+    gr-fa: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

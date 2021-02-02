@@ -46,6 +46,7 @@ permissions:
   - 'use text format rich_text'
   - 'view all revisions'
   - 'view any unpublished content'
+  - 'view field_mandatory_content'
   - 'view latest version'
   - 'view own unpublished content'
   - 'view terms in categories'

@@ -1,0 +1,9 @@
+uuid: 4e16c6aa-a535-4681-bead-0c9782053293
+langcode: en
+status: true
+dependencies: {  }
+id: uz-ru
+label: Uzbekistan-Russian
+direction: ltr
+weight: 8
+locked: false

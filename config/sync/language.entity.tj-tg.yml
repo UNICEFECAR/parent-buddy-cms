@@ -1,0 +1,9 @@
+uuid: 71a7e318-b7ba-43ba-aa06-845db4b4ecc9
+langcode: en
+status: true
+dependencies: {  }
+id: tj-tg
+label: Tajikistan-Tajik
+direction: ltr
+weight: 7
+locked: false

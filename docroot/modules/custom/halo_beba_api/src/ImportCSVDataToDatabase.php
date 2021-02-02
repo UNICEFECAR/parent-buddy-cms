@@ -6,6 +6,7 @@ use Drupal;
 use Drupal\taxonomy\Entity\Term;
 
 class ImportCSVDataToDatabase {
+
   /**
    * @param string $file_path
    * @param string $category
@@ -13,7 +14,7 @@ class ImportCSVDataToDatabase {
    *
    * @throws \Exception
    */
-  public static function importAustralianArticles($file_path, $category, &$context): void {
+  public static function importAustralianArticles(string $file_path, string $category, array &$context): void {
     require_once HALO_BEBA_MODULE_PATH . '/includes/clean_string.php';
 
     if (!isset($context['sandbox']['progress'])) {
@@ -104,7 +105,7 @@ class ImportCSVDataToDatabase {
    *
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  public static function importAustralianArticlesFinished($success, $results, $operations): void {
+  public static function importAustralianArticlesFinished(bool $success, array $results, array $operations): void {
     // The 'success' parameter means no fatal PHP errors were detected. All
     // other error management should be handled using 'results'.
     if ($success) {
@@ -130,7 +131,7 @@ class ImportCSVDataToDatabase {
    *
    * @throws \Exception
    */
-  private static function flush_data($database, $rows): void {
+  private static function flush_data(string $database, array $rows): void {
     $insert_fields = array_keys($rows[0]);
 
     $connection = Drupal::database();
@@ -150,7 +151,7 @@ class ImportCSVDataToDatabase {
    *
    * @throws \Exception
    */
-  public static function importTaxonomyTranslations($file_path, $langcode, &$context): void {
+  public static function importTaxonomyTranslations(string $file_path, string $langcode, array &$context): void {
     if (!isset($context['sandbox']['progress'])) {
       $context['sandbox']['progress'] = 0;
       $context['sandbox']['added'] = time();
@@ -227,7 +228,7 @@ class ImportCSVDataToDatabase {
    *
    * @throws \Drupal\Core\Entity\EntityStorageException
    */
-  public static function importTaxonomyTranslationsFinished($success, $results, $operations): void {
+  public static function importTaxonomyTranslationsFinished(bool $success, array $results, array $operations): void {
     // The 'success' parameter means no fatal PHP errors were detected. All
     // other error management should be handled using 'results'.
     if ($success) {

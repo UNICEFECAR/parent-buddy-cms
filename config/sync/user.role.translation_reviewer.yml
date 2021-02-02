@@ -1,0 +1,15 @@
+uuid: de5027b0-f625-4f15-ad86-f47800e79f9c
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: translation_reviewer
+label: 'Translation reviewer'
+weight: 17
+is_admin: null
+permissions:
+  - 'accept translation jobs'

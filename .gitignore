@@ -1,3 +1,6 @@
+# Ignore PHPStorm config data
+.idea
+
 # Ignore binaries.
 /bin
 
@@ -26,3 +29,11 @@ composer.lock
 # because of them and they do not have any configuration so are not used
 /config/sync/core.base_field_override.node.landing_page.moderation_state.yml
 /config/sync/core.base_field_override.node.page.moderation_state.yml
+
+# Ignore temporary languages used to facilitate translations
+/config/sync/language/ru
+/config/sync/language/sq
+/config/sync/language/sr
+
+# Do not upload webforms
+/config/sync/webform.webform.*.yml

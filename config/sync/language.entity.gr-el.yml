@@ -1,0 +1,9 @@
+uuid: 5cecb058-e03f-45b5-954c-539d58dc870a
+langcode: en
+status: true
+dependencies: {  }
+id: gr-el
+label: Greece-Greek
+direction: ltr
+weight: -4
+locked: false

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.activity
     - node.type.article
     - node.type.daily_homescreen_messages
     - node.type.faq
@@ -40,6 +41,11 @@ type_settings:
       default_revision: true
       label: 'In review'
       weight: -1
+    review_after_translation:
+      published: false
+      default_revision: true
+      label: 'Review after translation'
+      weight: 6
   transitions:
     archive:
       label: Archive
@@ -70,6 +76,7 @@ type_settings:
         - draft
         - published
         - review
+        - review_after_translation
     review:
       label: 'Send to review'
       to: review
@@ -77,8 +84,17 @@ type_settings:
       from:
         - draft
         - review
+    review_after_translation:
+      label: 'Review after translation'
+      from:
+        - draft
+        - published
+        - review
+      to: review_after_translation
+      weight: 5
   entity_types:
     node:
+      - activity
       - article
       - daily_homescreen_messages
       - faq

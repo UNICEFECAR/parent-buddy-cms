@@ -5,6 +5,11 @@ dependencies:
   config:
     - field.storage.node.field_australian_article
     - node.type.article
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
 id: node.article.field_australian_article
 field_name: field_australian_article
 entity_type: node

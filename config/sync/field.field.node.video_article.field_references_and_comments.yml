@@ -7,6 +7,10 @@ dependencies:
     - node.type.video_article
   module:
     - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
 id: node.video_article.field_references_and_comments
 field_name: field_references_and_comments
 entity_type: node

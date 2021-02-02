@@ -107,9 +107,16 @@ class ListContentResource extends ResourceBase {
     $older_then = $this->currentRequest->get('updatedFromDate') ?? 0;
     $published = $this->currentRequest->get('published') ?? 1;
 
+    // fix until we update the HaloBeba APP to deal with new setting for Serbian language
+    if ($langcode === 'sr') {
+      $langcode_adjusted = 'rs-sr';
+    } else {
+      $langcode_adjusted = $langcode;
+    }
+
     if ($types) {
       $total = Drupal::entityQuery('node')
-                     ->condition('langcode', $langcode)
+                     ->condition('langcode', $langcode_adjusted)
                      ->condition('type', $types, 'IN');
       if (1 === (int) $published) {
         $total = $total->condition('status', 1);
@@ -123,7 +130,7 @@ class ListContentResource extends ResourceBase {
 
       if ($total) {
         $nids = Drupal::entityQuery('node')
-                      ->condition('langcode', $langcode)
+                      ->condition('langcode', $langcode_adjusted)
                       ->condition('type', $types, 'IN');
         if (1 === (int) $published) {
           $nids = $nids->condition('status', 1);
@@ -145,11 +152,11 @@ class ListContentResource extends ResourceBase {
            * @var Node $node
            */
           foreach ($nodes as $key => $node) {
-            // if current node is in the same language and requested language just use the node
-            if ($node->get('langcode')->value === $langcode) {
+            // if current node is in the same language as requested language use the already loaded node, if not translate it
+            if ($node->get('langcode')->value === $langcode_adjusted) {
               $translated_node = $node;
             } else {
-              $translated_node = $node->getTranslation($langcode);
+              $translated_node = $node->getTranslation($langcode_adjusted);
             }
 
             $content_type = $translated_node->getType();

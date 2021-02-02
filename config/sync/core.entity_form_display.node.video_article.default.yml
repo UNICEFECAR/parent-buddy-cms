@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.video_article.field_content_predefined_tags
     - field.field.node.video_article.field_cover_video
     - field.field.node.video_article.field_keywords
+    - field.field.node.video_article.field_mandatory_content
     - field.field.node.video_article.field_references_and_comments
     - field.field.node.video_article.field_related_articles
     - node.type.video_article
@@ -83,6 +84,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
+    region: content
+  field_mandatory_content:
+    weight: 26
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_references_and_comments:
     weight: 8

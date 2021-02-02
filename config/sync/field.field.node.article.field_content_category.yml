@@ -6,6 +6,11 @@ dependencies:
     - field.storage.node.field_content_category
     - node.type.article
     - taxonomy.vocabulary.categories
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
 id: node.article.field_content_category
 field_name: field_content_category
 entity_type: node

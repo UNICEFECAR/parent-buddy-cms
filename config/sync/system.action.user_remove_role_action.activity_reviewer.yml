@@ -1,0 +1,14 @@
+uuid: f4888247-9cdb-4637-af3b-9f75491d43ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.activity_reviewer
+  module:
+    - user
+id: user_remove_role_action.activity_reviewer
+label: 'Remove the Activity reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: activity_reviewer

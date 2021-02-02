@@ -1,0 +1,14 @@
+uuid: de19312a-b978-4ff5-b8a0-6b1574dfa856
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.activity_creator
+  module:
+    - user
+id: user_remove_role_action.activity_creator
+label: 'Remove the Activity creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: activity_creator

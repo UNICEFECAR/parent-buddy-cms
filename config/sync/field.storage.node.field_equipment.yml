@@ -1,0 +1,31 @@
+uuid: 351ea2db-bf3a-4bc3-936b-2a85bdd2deb6
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_equipment
+field_name: field_equipment
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'yes'
+      label: 'YES'
+    -
+      value: 'no'
+      label: 'NO'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

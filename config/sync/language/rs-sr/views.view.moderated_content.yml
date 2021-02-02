@@ -1,0 +1,61 @@
+label: 'Moderirani sadržaj'
+description: 'Pronađite i moderirajte sadržaj.'
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtriraj
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          tags:
+            previous: '‹ Prethodni'
+            next: 'Sledeći ›'
+            first: '« Prvi'
+            last: 'Poslednji »'
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+      fields:
+        title:
+          label: Naslov
+          separator: ','
+        type:
+          label: 'Tip sadržaja'
+          separator: ','
+        name:
+          label: Аutor
+          separator: ','
+        moderation_state:
+          label: 'Stanje objave'
+          separator: ','
+        changed:
+          label: Ažuriran
+          separator: ','
+        operations:
+          label: Операције
+      filters:
+        title:
+          expose:
+            label: Naslov
+        type:
+          expose:
+            label: 'Tip sadržaja'
+        moderation_state:
+          expose:
+            label: 'Stanje objave'
+        langcode:
+          expose:
+            label: Језик
+      title: 'Moderirani sadržaj'
+      empty:
+        area_text_custom:
+          content: 'Nije dostupan moderirani sadržaj. Ovde su navedene samo verzije sadržaja na čekanju, kao što su skice.'
+  moderated_content:
+    display_title: 'Moderirani sadržaj'

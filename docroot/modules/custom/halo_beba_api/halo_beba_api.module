@@ -10,6 +10,9 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\file\FileInterface;
 use Drupal\image\Entity\ImageStyle;
+use Drupal\node\Entity\Node;
+use Drupal\tmgmt\Entity\JobItem;
+use Drupal\tmgmt\Entity\Translator;
 use Drupal\webform\Entity\Webform;
 
 define('HALO_BEBA_MODULE_PATH', __DIR__);
@@ -128,6 +131,172 @@ function halo_beba_api_form_alter(array &$form, FormStateInterface $form_state, 
 
       default:
       break;
+    }
+  } elseif ($form_id === 'tmgmt_job_item_edit_form') {
+    $current_path = \Drupal::service('path.current')->getPath();
+    $current_path_exploded = explode('/', $current_path);
+    $job_item_id = end($current_path_exploded);
+
+    // get job data
+    $connection = Drupal::database();
+    $sql = $connection->select('tmgmt_job_item', 'tji');
+    $sql->innerJoin('tmgmt_job', 'tj', 'tj.tjid = tji.tjid');
+    $sql->condition('tji.tjiid', $job_item_id);
+    $sql->fields('tji', []);
+    $sql->fields('tj', ['source_language']);
+    $sql_query = $sql->execute();
+
+    $job_data = (NULL !== $sql_query) ? $sql_query->fetchAssoc() : [];
+    if (!empty($job_data) && ($job_data['item_type'] === 'node')) {
+      $content_id = $job_data['item_id'];
+      /** @var Node $entity */
+      $entity = Node::load($content_id);
+
+      if (NULL !== $entity) {
+        $languages = \Drupal::languageManager()->getLanguages();
+        $translations = $entity->getTranslationLanguages();
+        $source_langcode = $job_data['source_language'];
+
+        $form['tmgmt_job_item_id'] = [
+          '#type'          => 'hidden',
+          '#default_value' => $job_item_id,
+        ];
+        $form['info']['tmgmt_source_update'] = [
+          '#type'         => 'details',
+          '#title'        => t('Source language: @language', ['@language' => $languages[$source_langcode]->getName()]),
+          '#tree'         => TRUE,
+          '#weight'       => -100,
+          '#multilingual' => TRUE,
+          'source'        => [
+            '#title'         => t('Select source language'),
+            '#title_display' => 'invisible',
+            '#type'          => 'select',
+            '#default_value' => $source_langcode,
+            '#options'       => [],
+          ],
+          'submit'        => [
+            '#type'   => 'submit',
+            '#value'  => t('Change'),
+            '#submit' => ['halo_beba_api_change_tmgmt_source_language'],
+          ],
+        ];
+        foreach ($languages as $language) {
+          if (isset($translations[$language->getId()])) {
+            $form['info']['tmgmt_source_update']['source']['#options'][$language->getId()] = $language->getName();
+          }
+        }
+
+        // add custom submit function that will set proper status for the translated content.
+        $form['tmgmt_content_id'] = [
+          '#type'          => 'hidden',
+          '#default_value' => $content_id,
+        ];
+        $form['actions']['accept']['#submit'][] = 'halo_beba_api_set_proper_translation_status';
+      }
+    }
+  }
+}
+
+/**
+ * @param array                                $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function halo_beba_api_change_tmgmt_source_language(array $form, FormStateInterface $form_state) {
+  $job_item_id = $form_state->getValue('tmgmt_job_item_id');
+  $new_source_langcode = $form_state->getValue('tmgmt_source_update')['source'];
+
+  /** @var \Drupal\tmgmt\Entity\JobItem $job_item */
+  $job_item = JobItem::load($job_item_id);
+
+  if (NULL !== $job_item) {
+    $job = $job_item->getJob();
+
+    if (NULL !== $job) {
+      $current_source_language = $job_item->getSourceLangCode();
+
+      if ($current_source_language !== !$new_source_langcode) {
+        $item_type = $job_item->get('item_type')->value;
+
+        if ($item_type === 'node') {
+          $item_id = $job_item->get('item_id')->value;
+          /** @var Node $node */
+          $node = Node::load($item_id);
+
+          if (NULL !== $node) {
+            /** @var Node $translated_node */
+            $translated_node = $node->getTranslation($new_source_langcode);
+
+            $new_title = $translated_node->getTitle();
+            $new_body = $translated_node->get('body')->value;
+
+            $data = $job_item->getData();
+
+            // replace title with the new source title
+            $data['title'][0]['value']['#text'] = $new_title;
+
+            // replace body with the new source body
+            $data['body'][0]['value']['#text'] = $new_body;
+
+            // set data that needs to be updated
+            $job_item->updateData('title', $data['title'], TRUE);
+            $job_item->updateData('body', $data['body'], TRUE);
+            $job_item->save();
+
+            $job->set('source_language', $new_source_langcode);
+            $job->save();
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * @param array                                $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function halo_beba_api_set_proper_translation_status(array $form, FormStateInterface $form_state) {
+  $job_item_id = $form_state->getValue('tmgmt_job_item_id');
+  $content_id = $form_state->getValue('tmgmt_content_id');
+
+  /** @var \Drupal\tmgmt\Entity\JobItem $job_item */
+  $job_item = JobItem::load($job_item_id);
+
+  if (NULL !== $job_item) {
+    $job = $job_item->getJob();
+
+    if (NULL !== $job) {
+      $target_language = $job->getTargetLangcode();
+
+      /** @var Node $node */
+      $node = Node::load($content_id);
+
+      if (NULL !== $node) {
+        // if current entity is in the same language as source language use the already loaded entity, if not translate it
+        if ($node->get('langcode')->value === $target_language) {
+          $use_node = $node;
+        } elseif($node->hasTranslation($target_language)) {
+          $use_node = \Drupal::service('entity.repository')->getTranslationFromContext($node, $target_language);
+        }
+
+        if (isset($use_node)) {
+          $current_account = \Drupal::currentUser();
+
+          $use_node->setUnpublished();
+          $use_node->setNewRevision();
+          $use_node->setRevisionCreationTime(time());
+          $use_node->setRevisionAuthorId($current_account->id());
+          $use_node->set('moderation_state', 'review_after_translation');
+          $use_node->set('status', 0);
+          $use_node->setOwnerId($current_account->id());
+
+          $use_node->save();
+        }
+      }
     }
   }
 }

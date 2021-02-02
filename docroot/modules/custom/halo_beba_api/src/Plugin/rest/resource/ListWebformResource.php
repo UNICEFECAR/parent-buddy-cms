@@ -91,9 +91,16 @@ class ListWebformResource extends ResourceBase {
 
     $published = $this->currentRequest->get('published') ?? 1;
 
+    // fix until we update the HaloBeba APP to deal with new setting for Serbian language
+    if ($langcode === 'sr') {
+      $langcode_adjusted = 'rs-sr';
+    } else {
+      $langcode_adjusted = $langcode;
+    }
+
     // get all webform nodes
     $total = Drupal::entityQuery('node')
-                   ->condition('langcode', $langcode)
+                   ->condition('langcode', $langcode_adjusted)
                    ->condition('type', 'webform');
     if (1 === (int) $published) {
       $total = $total->condition('status', 1);
@@ -104,7 +111,7 @@ class ListWebformResource extends ResourceBase {
 
     if ($total) {
       $nids = Drupal::entityQuery('node')
-                    ->condition('langcode', $langcode)
+                    ->condition('langcode', $langcode_adjusted)
                     ->condition('type', 'webform');
       if (1 === (int) $published) {
         $nids = $nids->condition('status', 1);
@@ -122,11 +129,11 @@ class ListWebformResource extends ResourceBase {
          * @var Node $node
          */
         foreach ($nodes as $key => $node) {
-          // if current node is in the same language and requested language just use the node
-          if ($node->get('langcode')->value === $langcode) {
+          // if current node is in the same language as requested language use the already loaded node, if not translate it
+          if ($node->get('langcode')->value === $langcode_adjusted) {
             $translated_node = $node;
           } else {
-            $translated_node = $node->getTranslation($langcode);
+            $translated_node = $node->getTranslation($langcode_adjusted);
           }
 
           $webform_value = $translated_node->get('webform')->getValue();
@@ -139,15 +146,15 @@ class ListWebformResource extends ResourceBase {
             $current_langcode = $poll->getLangcode();
 
             // check if poll has a translation in langcode we are requesting
-            if ($current_langcode === $langcode) {
+            if ($current_langcode === $langcode_adjusted) {
               $poll_link = $poll->toUrl('canonical', ['absolute' => TRUE])->toString(TRUE)->getGeneratedUrl();
             } else {
               /** @var \Drupal\locale\LocaleConfigManager $local_config_manager */
               $local_config_manager = Drupal::service('locale.config_manager');
-              if ($local_config_manager->hasTranslation('webform.webform.' . $poll_id, $langcode)) {
+              if ($local_config_manager->hasTranslation('webform.webform.' . $poll_id, $langcode_adjusted)) {
                 $poll_link = $poll->toUrl('canonical', ['absolute' => TRUE])->toString(TRUE)->getGeneratedUrl();
 
-                $poll_link = str_ireplace('/'. $current_langcode . '/', '/' . $langcode . '/', $poll_link);
+                $poll_link = str_ireplace('/'. $current_langcode . '/', '/' . $langcode_adjusted . '/', $poll_link);
               }
             }
 

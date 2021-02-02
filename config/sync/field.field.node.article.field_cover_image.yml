@@ -6,6 +6,11 @@ dependencies:
     - field.storage.node.field_cover_image
     - media.type.image
     - node.type.article
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
 id: node.article.field_cover_image
 field_name: field_cover_image
 entity_type: node

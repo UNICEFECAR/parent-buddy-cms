@@ -1,0 +1,31 @@
+label: 'Termin taksonomije'
+description: 'Sadržaj koji pripada određenom terminu taksonomije'
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Primeni
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+          tags:
+            previous: ‹‹
+            next: ››
+      arguments:
+        tid:
+          exception:
+            title: Sve
+          title: '{{ arguments.tid }}'
+  feed_1:
+    display_title: Izvor
+  page_1:
+    display_title: Strana

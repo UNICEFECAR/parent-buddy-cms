@@ -7,6 +7,11 @@ dependencies:
     - node.type.article
     - node.type.milestone
     - node.type.video_article
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
 id: node.milestone.field_related_articles
 field_name: field_related_articles
 entity_type: node

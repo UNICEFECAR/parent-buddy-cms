@@ -1,0 +1,9 @@
+uuid: 136c7596-3fe4-4ced-8d90-b9ac9a626308
+langcode: en
+status: true
+dependencies: {  }
+id: gr-fa
+label: Greece-Persian
+direction: rtl
+weight: -3
+locked: false

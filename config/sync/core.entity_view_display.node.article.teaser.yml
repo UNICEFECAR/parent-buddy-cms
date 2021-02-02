@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article.field_content_predefined_tags
     - field.field.node.article.field_cover_image
     - field.field.node.article.field_keywords
+    - field.field.node.article.field_mandatory_content
     - field.field.node.article.field_references_and_comments
     - field.field.node.article.field_related_articles
     - node.type.article
@@ -41,6 +42,7 @@ hidden:
   field_content_predefined_tags: true
   field_cover_image: true
   field_keywords: true
+  field_mandatory_content: true
   field_references_and_comments: true
   field_related_articles: true
   langcode: true

@@ -1,0 +1,25 @@
+uuid: 89731673-d87e-465e-8ffb-24868049bab0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_equipment
+    - node.type.activity
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
+id: node.activity.field_equipment
+field_name: field_equipment
+entity_type: node
+bundle: activity
+label: Equipment
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

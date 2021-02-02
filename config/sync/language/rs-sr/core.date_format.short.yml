@@ -1,0 +1,2 @@
+label: 'Podrazumevani kratki tip datuma'
+pattern: 'd-m-Y - H:i'

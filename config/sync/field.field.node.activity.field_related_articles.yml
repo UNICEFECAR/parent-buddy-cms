@@ -1,0 +1,36 @@
+uuid: 24b5bb24-8837-4f01-b5eb-374fe8130a80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_articles
+    - node.type.activity
+    - node.type.article
+    - node.type.video_article
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
+id: node.activity.field_related_articles
+field_name: field_related_articles
+entity_type: node
+bundle: activity
+label: 'Related Articles'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      activity: activity
+      article: article
+      video_article: video_article
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: activity
+field_type: entity_reference

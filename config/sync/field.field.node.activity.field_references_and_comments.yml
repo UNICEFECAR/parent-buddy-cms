@@ -1,0 +1,25 @@
+uuid: c966fe3f-5127-415f-8e06-d081919ef98c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_references_and_comments
+    - node.type.activity
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
+id: node.activity.field_references_and_comments
+field_name: field_references_and_comments
+entity_type: node
+bundle: activity
+label: 'References and comments'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -87,6 +87,11 @@ class ListTaxonomyResource extends ResourceBase {
       'data'  => [],
     ];
 
+    // fix until we update the HaloBeba APP to deal with new setting for Serbian language
+    if ($langcode === 'sr') {
+      $langcode = 'rs-sr';
+    }
+
     $query = Drupal::entityQuery('taxonomy_term');
     $query->condition('vid', $vocabulary);
     $query->sort('weight');
@@ -99,10 +104,10 @@ class ListTaxonomyResource extends ResourceBase {
       $parent = $term->get('parent')->target_id;
       $tid = $term->id();
 
-      // if current node is in the same language and requested language just use the node
+      // if current term is in the same language as requested language use it, if not translate it
       if ($term->get('langcode')->value === $langcode) {
         $translated_term = $term;
-      } elseif($term->hasTranslation($langcode)){
+      } elseif($term->hasTranslation($langcode)) {
         $translated_term = Drupal::service('entity.repository')->getTranslationFromContext($term, $langcode);
       } else {
         $translated_term = $term;

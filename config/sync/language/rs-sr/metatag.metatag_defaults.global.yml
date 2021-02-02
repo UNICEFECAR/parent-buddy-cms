@@ -1,0 +1,4 @@
+label: Globalni
+tags:
+  canonical_url: '[current-page:url]'
+  title: '[current-page:title] | [site:name]'

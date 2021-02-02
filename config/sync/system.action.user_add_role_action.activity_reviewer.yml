@@ -1,0 +1,14 @@
+uuid: 777f8a4f-7644-4bea-b962-0fa2246b91ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.activity_reviewer
+  module:
+    - user
+id: user_add_role_action.activity_reviewer
+label: 'Add the Activity reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: activity_reviewer

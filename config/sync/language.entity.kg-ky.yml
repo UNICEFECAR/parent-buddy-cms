@@ -1,0 +1,9 @@
+uuid: 52d4eaed-a495-465f-9878-409b6a776a18
+langcode: en
+status: true
+dependencies: {  }
+id: kg-ky
+label: Kyrgyzstan-Kyrgyz
+direction: ltr
+weight: 0
+locked: false

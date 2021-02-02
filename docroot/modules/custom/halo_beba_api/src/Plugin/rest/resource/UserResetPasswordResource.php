@@ -140,6 +140,7 @@ Please remember this password and use it to log-in in the future.
             break;
 
             case 'sr':
+            case 'rs-sr':
               $subject = 'Zamenske informacije za prijavu za nalog ' . $user->getAccountName();
               $message = "
 Podnesen je zahtev za promenu lozinke za Halo Beba Aplikaciju.

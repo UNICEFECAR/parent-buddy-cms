@@ -1,0 +1,28 @@
+uuid: 0a3b9d9d-b630-441b-ba4e-2af3314ac868
+langcode: en
+status: true
+dependencies: {  }
+id: activity_creator
+label: 'Activity creator'
+weight: 18
+is_admin: false
+permissions:
+  - 'access ckeditor_media_browser entity browser pages'
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access toolbar'
+  - 'configure any layout'
+  - 'create activity content'
+  - 'create url aliases'
+  - 'edit own activity content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view activity revisions'
+  - 'view any unpublished content'
+  - 'view field_mandatory_content'
+  - 'view latest version'
+  - 'view own unpublished content'

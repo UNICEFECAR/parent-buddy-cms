@@ -1,9 +1,9 @@
-uuid: 374262d7-e60c-4d49-8a4d-48b41700b56d
+uuid: 9d720467-703f-4692-a88d-0dd8978fc709
 langcode: en
 status: true
 dependencies: {  }
-id: sr
-label: Serbian
+id: kg-ru
+label: Kyrgyzstan-Russian
 direction: ltr
 weight: 1
 locked: false

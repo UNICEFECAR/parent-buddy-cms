@@ -6,6 +6,11 @@ dependencies:
     - field.storage.node.field_content_predefined_tags
     - node.type.faq
     - taxonomy.vocabulary.predefined_tags
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
 id: node.faq.field_content_predefined_tags
 field_name: field_content_predefined_tags
 entity_type: node

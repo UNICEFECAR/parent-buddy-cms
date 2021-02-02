@@ -1,0 +1,49 @@
+label: 'Biblioteka prilagođenih blokova'
+description: 'Pronađite i upravljajte prilagođenim blokovima.'
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Primeni
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          tags:
+            previous: '‹ Prethodni'
+            next: 'Sledeći ›'
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+      fields:
+        info:
+          label: 'Opis bloka'
+          separator: ','
+        type:
+          label: 'Tip bloka'
+          separator: ','
+        changed:
+          label: Ažuriran
+        operations:
+          label: Операције
+      filters:
+        info:
+          expose:
+            label: 'Opis bloka'
+        type:
+          expose:
+            label: 'Tip bloka'
+      title: 'Biblioteka prilagođenih blokova'
+      empty:
+        area_text_custom:
+          content: 'Ne postoje prilagođeni blokovi.'
+  page_1:
+    display_title: Strana
+    display_options:
+      menu:
+        title: 'Biblioteka prilagođenih blokova'

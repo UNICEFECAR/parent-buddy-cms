@@ -1,0 +1,9 @@
+uuid: be303639-b6d4-4ded-a503-dbd2137ac8b3
+langcode: en
+status: true
+dependencies: {  }
+id: mk-mk
+label: 'North Macedonia-Macedonian'
+direction: ltr
+weight: 4
+locked: false

@@ -58,14 +58,14 @@ settings:
     stylescombo:
       styles: ''
     wordcount:
-      enable: true
-      show_paragraphs: false
-      show_word_count: true
-      show_char_count: true
-      count_spaces: true
+      enable: 1
+      show_paragraphs: 0
+      show_word_count: 1
+      show_char_count: 1
+      count_spaces: 1
       count_html: 0
-      max_words: -1
-      max_chars: -1
+      max_words: '-1'
+      max_chars: '-1'
 image_upload:
   status: true
   scheme: public

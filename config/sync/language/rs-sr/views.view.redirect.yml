@@ -1,0 +1,68 @@
+label: Preusmeravanje
+description: 'Lista preusmeravanja'
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtriraj
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          tags:
+            previous: '‹ prethodni'
+            next: 'sledeći ›'
+            first: '« prvi'
+            last: 'poslednji »'
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+      fields:
+        redirect_bulk_form:
+          action_title: 'Sa izborom'
+        redirect_source__path:
+          label: Od
+          separator: ','
+        created:
+          label: Napravljen
+      filters:
+        redirect_source__path:
+          expose:
+            label: Od
+        redirect_redirect__uri:
+          expose:
+            label: Ka
+        status_code:
+          expose:
+            label: 'Statusni kod'
+          group_info:
+            label: 'Statusni kod'
+            group_items:
+              1:
+                title: '300 Višestruki Izbor'
+              2:
+                title: '301 Premešteno Trajno'
+              3:
+                title: '302 Pronađeno'
+              4:
+                title: '303 Vidi Ostalo'
+              5:
+                title: '304 Nije Izmenjeno'
+              6:
+                title: '305 Koristi Proksi'
+              7:
+                title: '307 Privremeno Preusmeravanje'
+        language:
+          expose:
+            label: 'Originalni jezik'
+      title: Preusmeravanje
+      empty:
+        area_text_custom:
+          content: 'Još uvek ne postoji preusmeravanje.'
+  page_1:
+    display_title: Strana

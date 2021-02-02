@@ -1,0 +1,14 @@
+uuid: 1e247450-a761-4bad-ac26-91574cc901bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.manage_mandatory_content
+  module:
+    - user
+id: user_add_role_action.manage_mandatory_content
+label: 'Add the Manage Mandatory Content role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: manage_mandatory_content

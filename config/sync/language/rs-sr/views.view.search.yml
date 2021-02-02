@@ -1,0 +1,33 @@
+label: Pretraga
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Pretraga
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+          text_input_required: 'Unesite ključne reči za pretragu veb lokacije.'
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+          tags:
+            previous: ‹‹
+            next: ››
+      filters:
+        search_api_fulltext:
+          expose:
+            label: 'Ključne reči'
+      empty:
+        area:
+          content:
+            value: 'Vaša pretraga nije dala rezultate.'
+      title: Pretraga
+  page:
+    display_title: Strana

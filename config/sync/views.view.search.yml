@@ -76,6 +76,7 @@ display:
         options:
           view_modes:
             'entity:node':
+              activity: default
               article: default
               daily_homescreen_messages: default
               faq: default

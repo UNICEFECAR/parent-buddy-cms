@@ -1,0 +1,5 @@
+label: 'Status objavljivanja'
+description: 'Boolov znak koji pokazuje da li je čvor objavljen.'
+settings:
+  on_label: Uključeno
+  off_label: Isključeno

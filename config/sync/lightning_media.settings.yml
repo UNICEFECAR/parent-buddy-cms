@@ -2,3 +2,4 @@ entity_embed:
   choose_display: false
 _core:
   default_config_hash: Mjf9tAetHCbs_auim_LDvipF4XoBlJpVrF0AijxwdOg
+revision_ui: true

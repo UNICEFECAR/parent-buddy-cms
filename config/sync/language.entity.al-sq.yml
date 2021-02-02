@@ -1,0 +1,9 @@
+uuid: ed277413-2088-4f3f-a97d-ce95c6b32ca7
+langcode: en
+status: true
+dependencies: {  }
+id: al-sq
+label: Albania-Albanian
+direction: ltr
+weight: -7
+locked: false

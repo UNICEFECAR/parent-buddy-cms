@@ -1,0 +1,49 @@
+uuid: 2c31bcc8-c02c-4b4e-ad24-30cc10cba3a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.activity.body
+    - field.field.node.activity.field_content_predefined_tags
+    - field.field.node.activity.field_cover_image
+    - field.field.node.activity.field_equipment
+    - field.field.node.activity.field_keywords
+    - field.field.node.activity.field_mandatory_content
+    - field.field.node.activity.field_references_and_comments
+    - field.field.node.activity.field_related_articles
+    - field.field.node.activity.field_type_of_support
+    - node.type.activity
+  module:
+    - text
+    - user
+id: node.activity.teaser
+targetEntityType: node
+bundle: activity
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  field_content_predefined_tags: true
+  field_cover_image: true
+  field_equipment: true
+  field_keywords: true
+  field_mandatory_content: true
+  field_references_and_comments: true
+  field_related_articles: true
+  field_type_of_support: true
+  langcode: true
+  search_api_excerpt: true

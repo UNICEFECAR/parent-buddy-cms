@@ -27,9 +27,9 @@ class ImportTaxonomyTranslations extends FormBase {
       '#description'   => t(''),
       '#default_value' => '',
       '#options'       => array(
-        ''   => t('Select Value'),
-        'en' => 'English',
-        'sr' => 'Serbian',
+        ''      => t('Select Value'),
+        'en'    => 'English',
+        'rs-sr' => 'Serbian',
       ),
       '#required'      => TRUE,
     );

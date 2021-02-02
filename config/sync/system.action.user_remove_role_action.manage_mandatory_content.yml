@@ -1,0 +1,14 @@
+uuid: 531b2d8b-e5e7-433f-86b8-5c4fb01d979c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.manage_mandatory_content
+  module:
+    - user
+id: user_remove_role_action.manage_mandatory_content
+label: 'Remove the Manage Mandatory Content role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: manage_mandatory_content

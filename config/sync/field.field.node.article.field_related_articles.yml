@@ -4,8 +4,14 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_related_articles
+    - node.type.activity
     - node.type.article
     - node.type.video_article
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
 id: node.article.field_related_articles
 field_name: field_related_articles
 entity_type: node
@@ -20,6 +26,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
+      activity: activity
       article: article
       video_article: video_article
     sort:

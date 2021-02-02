@@ -1,0 +1,34 @@
+label: Arhiva
+description: 'Sav sadržaj, po mesecu.'
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      title: 'Mesečna arhiva.'
+      exposed_form:
+        options:
+          submit_button: Primeni
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+          tags:
+            previous: ‹‹
+            next: ››
+      arguments:
+        created_year_month:
+          title: '{{ arguments.created_year_month }}'
+  block_1:
+    display_title: Blok
+    display_options:
+      arguments:
+        created_year_month:
+          title: '{{ arguments.created_year_month }}'
+  page_1:
+    display_title: Strana

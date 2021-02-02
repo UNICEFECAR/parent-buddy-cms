@@ -1,0 +1,20 @@
+uuid: 6a87d41f-9233-4b3a-b77d-2e8806798e84
+langcode: en
+status: true
+dependencies: {  }
+id: activity_reviewer
+label: 'Activity reviewer'
+weight: 19
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any activity content'
+  - 'edit any activity content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view field_mandatory_content'
+  - 'view latest version'

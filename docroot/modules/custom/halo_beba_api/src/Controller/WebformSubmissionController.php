@@ -25,7 +25,7 @@ class WebformSubmissionController extends ControllerBase {
         $submission_text = '';
       break;
 
-      case 'sr':
+      case 'rs-sr':
         $submission_text = '';
       break;
 

@@ -1,0 +1,9 @@
+uuid: 0438c092-69ea-40c6-b148-05b33f6afb03
+langcode: en
+status: true
+dependencies: {  }
+id: xk-rs
+label: Kosovo-Serbian
+direction: ltr
+weight: -1
+locked: false

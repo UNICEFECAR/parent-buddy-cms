@@ -1,0 +1,9 @@
+uuid: e44d6da5-f22f-416c-8647-a90c94569556
+langcode: en
+status: true
+dependencies: {  }
+id: mk-sq
+label: 'North Macedonia-Albanian'
+direction: ltr
+weight: 3
+locked: false

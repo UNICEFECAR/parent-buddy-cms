@@ -1,0 +1,14 @@
+uuid: 0c9bebca-1c9c-4ec4-9bd0-76a835f7660a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.translation_manager
+  module:
+    - user
+id: user_remove_role_action.translation_manager
+label: 'Remove the Translation manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: translation_manager

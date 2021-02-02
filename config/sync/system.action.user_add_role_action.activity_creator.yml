@@ -1,0 +1,14 @@
+uuid: 27808687-c2f2-4708-b49c-9e55f9b4ef72
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.activity_creator
+  module:
+    - user
+id: user_add_role_action.activity_creator
+label: 'Add the Activity creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: activity_creator

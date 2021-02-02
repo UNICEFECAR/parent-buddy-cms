@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.video_article.field_content_predefined_tags
     - field.field.node.video_article.field_cover_video
     - field.field.node.video_article.field_keywords
+    - field.field.node.video_article.field_mandatory_content
     - field.field.node.video_article.field_references_and_comments
     - field.field.node.video_article.field_related_articles
     - node.type.video_article
@@ -69,6 +70,16 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_mandatory_content:
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_related_articles:
     weight: 6

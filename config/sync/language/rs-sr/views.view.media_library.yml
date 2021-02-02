@@ -1,0 +1,120 @@
+label: 'Medijska biblioteka'
+description: 'Pronađi i upravljaj medijom.'
+display:
+  default:
+    display_title: Glavni
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Primeni filtere'
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortiraj po'
+          sort_asc_label: Uzlazni
+          sort_desc_label: Silazni
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Stavke po strani'
+            items_per_page_options_all_label: '- Sve -'
+            offset_label: Ofset
+          tags:
+            previous: ‹‹
+            next: ››
+      fields:
+        media_bulk_form:
+          action_title: Akcija
+      filters:
+        status:
+          expose:
+            label: 'Status objavljivanja'
+          group_info:
+            label: Objavljeno
+            group_items:
+              1:
+                title: Objavljeno
+              2:
+                title: Neobjavljeno
+        name:
+          expose:
+            label: Ime
+        bundle:
+          expose:
+            label: 'Tip medije'
+          group_info:
+            label: 'Tip medije'
+        langcode:
+          expose:
+            label: Језик
+      sorts:
+        created:
+          expose:
+            label: 'Najnovije prvo'
+        name:
+          expose:
+            label: 'Ime (A-Z)'
+        name_1:
+          expose:
+            label: 'Ime (Z-A)'
+      title: Medija
+      empty:
+        area_text_custom:
+          content: 'Nisu dostupni mediji.'
+  page:
+    display_title: Strana
+    display_options:
+      fields:
+        media_bulk_form:
+          action_title: Akcija
+        name:
+          separator: ','
+        edit_media:
+          alter:
+            text: 'Izmeni {{ name }}'
+            alt: 'Izmeni {{ name }}'
+          text: Измени
+        delete_media:
+          alter:
+            text: 'Izbriši {{ name }}'
+            alt: 'Izbriši {{ name }}'
+          text: Избриши
+  widget:
+    display_title: Vidžet
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Ime
+      arguments:
+        bundle:
+          exception:
+            title: Sve
+      header:
+        display_link_grid:
+          label: Mreža
+        display_link_table:
+          label: Tabela
+  widget_table:
+    display_title: 'Widget (tabela)'
+    display_options:
+      fields:
+        thumbnail__target_id:
+          label: 'Umanjeni prikaz'
+        name:
+          label: Ime
+        uid:
+          label: Аutor
+        changed:
+          label: Ažuriran
+      filters:
+        name:
+          expose:
+            label: Ime
+      arguments:
+        bundle:
+          exception:
+            title: Sve
+      header:
+        display_link_grid:
+          label: Mreža
+        display_link_table:
+          label: Tabela

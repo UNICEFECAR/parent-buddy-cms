@@ -1,0 +1,16 @@
+uuid: 567174da-f5b9-4d23-8a06-1ab81c22d784
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.activity
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.activity
+target_entity_type_id: node
+target_bundle: activity
+default_langcode: current_interface
+language_alterable: true

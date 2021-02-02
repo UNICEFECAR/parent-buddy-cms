@@ -6,6 +6,11 @@ dependencies:
     - field.storage.node.field_cover_video
     - media.type.video
     - node.type.video_article
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: true
 id: node.video_article.field_cover_video
 field_name: field_cover_video
 entity_type: node

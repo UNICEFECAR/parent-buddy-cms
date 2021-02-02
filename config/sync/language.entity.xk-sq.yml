@@ -1,0 +1,9 @@
+uuid: 2ccd1d8e-550d-4ad4-9f50-d4845ad97b94
+langcode: en
+status: true
+dependencies: {  }
+id: xk-sq
+label: Kosovo-Albanian
+direction: ltr
+weight: -2
+locked: false

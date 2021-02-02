@@ -1,0 +1,9 @@
+uuid: 70211196-5f83-4a9d-9756-e314f1293093
+langcode: en
+status: true
+dependencies: {  }
+id: sq
+label: Albanian
+direction: ltr
+weight: -9
+locked: false
