@@ -132,7 +132,9 @@ function halo_beba_api_form_alter(array &$form, FormStateInterface $form_state, 
       default:
       break;
     }
-  } elseif ($form_id === 'tmgmt_job_item_edit_form') {
+  }
+
+  if ($form_id === 'tmgmt_job_item_edit_form') {
     $current_path = \Drupal::service('path.current')->getPath();
     $current_path_exploded = explode('/', $current_path);
     $job_item_id = end($current_path_exploded);

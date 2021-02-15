@@ -46,18 +46,23 @@ class ContentEntitySource extends SourcePluginBase implements SourcePreviewInter
 
     if (NULL !== $entity) {
       $job = $job_item->getJob();
-      $source_language = $job->getSourceLangcode();
 
-      // if current entity is in the same language as source language use the already loaded entity, if not translate it
-      if ($entity->get('langcode')->value === $source_language) {
-        $translated_entity = $entity;
-      } elseif($entity->hasTranslation($source_language)) {
-        $translated_entity = \Drupal::service('entity.repository')->getTranslationFromContext($entity, $source_language);
+      if (NULL !== $job) {
+        $source_language = $job->getSourceLangcode();
+
+        // if current entity is in the same language as source language use the already loaded entity, if not translate it
+        if ($entity->get('langcode')->value === $source_language) {
+          $translated_entity = $entity;
+        } elseif($entity->hasTranslation($source_language)) {
+          $translated_entity = \Drupal::service('entity.repository')->getTranslationFromContext($entity, $source_language);
+        } else {
+          $translated_entity = $entity;
+        }
+
+        $return = $translated_entity;
       } else {
-        $translated_entity = $entity;
+        $return = $entity;
       }
-
-      $return = $translated_entity;
     } else {
       $return = NULL;
     }
