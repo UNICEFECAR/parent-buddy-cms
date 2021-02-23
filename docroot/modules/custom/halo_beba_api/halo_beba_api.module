@@ -358,3 +358,79 @@ function halo_beba_api_preprocess_html(array &$variables) {
     $variables['page']['#attached']['html_head'][] = [$viewport, 'viewport'];
   }
 }
+
+
+function halo_beba_api_rebuild() {
+  $connection = Drupal::database();
+
+  $sql = "
+    SELECT 
+      c.*
+    FROM config AS c
+    WHERE c.name LIKE '%editorial%'
+  ";
+  $sql_query = $connection->query($sql);
+
+  $editorials = [];
+  while ($row = $sql_query->fetchAssoc()) {
+    $row['data'] = unserialize($row['data'], ['allowed_classes' => TRUE]);
+
+    if (!empty($row['data']) && isset($row['data']['type_settings']['states'])) {
+      foreach($row['data']['type_settings']['states'] as $key => $value) {
+        if (isset($value['default_revision'])) {
+          $row['data']['type_settings']['states'][$key]['default_revision'] = TRUE;
+        }
+      }
+
+      $editorials[] = $row;
+    }
+  }
+
+  if (!empty($editorials)) {
+    foreach ($editorials as $editorial) {
+      $connection->update('config')
+        ->fields([
+          'data' => serialize($editorial['data']),
+        ])
+        ->condition('collection', $editorial['collection'])
+        ->condition('name', $editorial['name'])
+      ->execute();
+    }
+  }
+
+
+  $sql = "
+    SELECT 
+      cc.cid,
+      cc.data
+    FROM cache_config AS cc
+    WHERE cc.cid LIKE '%editorial%'
+  ";
+  $sql_query = $connection->query($sql);
+
+  $editorials_config = [];
+  while ($row = $sql_query->fetchAssoc()) {
+    $row['data'] = unserialize($row['data'], ['allowed_classes' => TRUE]);
+
+    if (!empty($row['data']) && isset($row['data']['type_settings']['states'])) {
+      foreach($row['data']['type_settings']['states'] as $key => $value) {
+        if (isset($value['default_revision'])) {
+          $row['data']['type_settings']['states'][$key]['default_revision'] = TRUE;
+        }
+      }
+
+      $editorials_config[] = $row;
+    }
+  }
+
+  if (!empty($editorials_config)) {
+    foreach ($editorials_config as $editorial) {
+      $connection->update('cache_config')
+        ->fields([
+          'data' => serialize($editorial['data']),
+        ])
+        ->condition('cid', $editorial['cid'])
+      ->execute();
+    }
+  }
+}

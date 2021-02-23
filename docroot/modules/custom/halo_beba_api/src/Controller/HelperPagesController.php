@@ -42,6 +42,77 @@ class HelperPagesController extends ControllerBase {
 
     $sql = "
       SELECT
+        nfd.nid
+      FROM node_field_data AS nfd
+      WHERE nfd.langcode = 'rs-sr'
+        AND nfd.default_langcode = 1
+    ";
+    $sql_query = $connection->query($sql);
+
+    $articles = [];
+    while ($row = $sql_query->fetchField()) {
+      $articles[] = $row;
+    }
+
+    foreach ($articles as $article) {
+      // check if we have English translation for this article
+      $sql = "
+        SELECT
+          nfd.nid
+        FROM node_field_data AS nfd
+        WHERE nfd.nid = :nid
+          AND nfd.langcode = 'en'
+          AND nfd.default_langcode = 0
+      ";
+      $sql_query = $connection->query($sql, [':nid' => $article]);
+      $exists = $sql_query->fetchField();
+
+      if ($exists) {
+        // change English to be default language
+        $sql_update_en = "
+          UPDATE node_field_data
+          SET default_langcode = 1, revision_translation_affected = 1, content_translation_source = 'und'
+          WHERE nid = :nid
+            AND langcode = 'en'
+        ";
+        $connection->query($sql_update_en, [':nid' => $article]);
+        $sql_update_en = "
+          UPDATE node_field_revision
+          SET default_langcode = 1, revision_translation_affected = 1, content_translation_source = 'und'
+          WHERE nid = :nid
+            AND langcode = 'en'
+        ";
+        $connection->query($sql_update_en, [':nid' => $article]);
+
+        // change Serbian to be a translation language
+        $sql_update_sr = "
+          UPDATE node_field_data
+          SET default_langcode = 0, revision_translation_affected = null, content_translation_source = 'en'
+          WHERE nid = :nid
+            AND langcode = 'rs-sr'
+        ";
+        $connection->query($sql_update_sr, [':nid' => $article]);
+        $sql_update_sr = "
+          UPDATE node_field_revision
+          SET default_langcode = 0, revision_translation_affected = null, content_translation_source = 'en'
+          WHERE nid = :nid
+            AND langcode = 'rs-sr'
+        ";
+        $connection->query($sql_update_sr, [':nid' => $article]);
+      }
+    }
+    drupal_flush_all_caches();
+
+
+    die('zavrsen update');
+
+
+
+
+
+
+    $sql = "
+      SELECT
         `table_name`
       FROM INFORMATION_SCHEMA.`COLUMNS` 
       WHERE table_schema = 'ecaroparentingapppi3xep5h4v'
