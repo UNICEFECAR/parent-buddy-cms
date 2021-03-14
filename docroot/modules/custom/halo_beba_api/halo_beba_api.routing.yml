@@ -46,6 +46,14 @@ halo_beba_api.administration_page.import_taxonomy_translations:
   requirements:
     _permission: 'administer site configuration'
 
+halo_beba_api.administration_page.copy_content_between_languages:
+  path: '/admin/halo-beba-api/copy-content-between-languages'
+  defaults:
+    _title: 'Copy Content Between Languages'
+    _form: '\Drupal\halo_beba_api\Form\CopyContentBetweenLanguages'
+  requirements:
+    _permission: 'administer site configuration'
+
 halo_beba_api.webform_submission_page:
   path: '/webform-submission/{langcode}'
   defaults:

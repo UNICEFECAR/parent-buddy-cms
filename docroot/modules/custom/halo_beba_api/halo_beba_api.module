@@ -25,7 +25,7 @@ define('HALO_BEBA_MODULE_PATH', __DIR__);
  *
  * @return string
  */
-function halo_beba_api_help(string $route_name, RouteMatchInterface $route_match) {
+function halo_beba_api_help(string $route_name, RouteMatchInterface $route_match): string {
   $output = '';
 
   switch ($route_name) {
@@ -359,7 +359,6 @@ function halo_beba_api_preprocess_html(array &$variables) {
   }
 }
 
-
 function halo_beba_api_rebuild() {
   $connection = Drupal::database();
 
@@ -397,7 +396,6 @@ function halo_beba_api_rebuild() {
       ->execute();
     }
   }
-
 
   $sql = "
     SELECT 

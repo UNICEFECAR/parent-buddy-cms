@@ -21,9 +21,11 @@ class HaloBebaAdministrationController extends ControllerBase {
    */
   public function AdministrationPage(Request $request): array {
     $link_import_taxonomy_translations = Link::fromTextAndUrl('Import Taxonomy Translations', Url::fromRoute('halo_beba_api.administration_page.import_taxonomy_translations'));
+    $link_copy_content_between_languages = Link::fromTextAndUrl('Copy Content Between Languages', Url::fromRoute('halo_beba_api.administration_page.copy_content_between_languages'));
 
     $links = [
-      $link_import_taxonomy_translations->toString()
+      $link_import_taxonomy_translations->toString(),
+      $link_copy_content_between_languages->toString(),
     ];
 
     return [
