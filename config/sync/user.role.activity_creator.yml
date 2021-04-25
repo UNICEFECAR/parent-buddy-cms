@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: activity_creator
 label: 'Activity creator'
-weight: 18
+weight: 14
 is_admin: false
 permissions:
   - 'access ckeditor_media_browser entity browser pages'

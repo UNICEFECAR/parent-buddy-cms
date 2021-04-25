@@ -18,6 +18,7 @@ class CopyContentBetweenLanguagesBatch {
     $current_account = Drupal::currentUser();
     $connection = Drupal::database();
     $content_types = [
+      'activity',
       'article',
       'daily_homescreen_messages',
       'faq',

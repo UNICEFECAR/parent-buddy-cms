@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: page_reviewer
 label: 'Basic page reviewer'
-weight: 8
+weight: 3
 is_admin: false
 permissions:
   - 'access administration pages'

@@ -9,7 +9,7 @@ third_party_settings:
     description: 'Role that will have access to Field that will be used to mark Mandatory Articles.'
 id: manage_mandatory_content
 label: 'Manage Mandatory Content'
-weight: 15
+weight: 10
 is_admin: null
 permissions:
   - 'create field_mandatory_content'

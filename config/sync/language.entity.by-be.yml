@@ -1,0 +1,9 @@
+uuid: e0661daa-3fd6-41f2-bc0a-95e5cf0b0a33
+langcode: en
+status: true
+dependencies: {  }
+id: by-be
+label: Belarus-Belarussian
+direction: ltr
+weight: -8
+locked: false

@@ -85,6 +85,7 @@ class CopyContentBetweenLanguages extends FormBase {
     $connection = Drupal::database();
 
     $content_types = [
+      'activity',
       'article',
       'daily_homescreen_messages',
       'faq',

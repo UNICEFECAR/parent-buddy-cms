@@ -1,0 +1,28 @@
+uuid: 0b26e0ff-5d35-41dc-9077-4580b61b5b3d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - seven
+_core:
+  default_config_hash: XdkKOI3-nvnGym135VOpwEwX13O8irqxZeikL5R5A24
+id: seven_login
+theme: seven
+region: content
+weight: 10
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/reset/*\r\n/user/password\r\n/form/*\r\n/webform-submission*"
+    negate: true
+    context_mapping: {  }

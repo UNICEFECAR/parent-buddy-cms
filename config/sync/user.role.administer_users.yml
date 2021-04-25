@@ -9,7 +9,7 @@ third_party_settings:
     description: 'Used to allow REST API to create and verify Users of the Site.'
 id: administer_users
 label: 'Administer Users'
-weight: 2
+weight: -3
 is_admin: null
 permissions:
   - 'administer users'

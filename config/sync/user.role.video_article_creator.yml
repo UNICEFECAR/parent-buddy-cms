@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: video_article_creator
 label: 'Video Article creator'
-weight: -6
+weight: -11
 is_admin: false
 permissions:
   - 'access administration pages'

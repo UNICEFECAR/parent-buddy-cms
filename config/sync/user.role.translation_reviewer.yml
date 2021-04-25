@@ -9,7 +9,7 @@ third_party_settings:
     description: ''
 id: translation_reviewer
 label: 'Translation reviewer'
-weight: 17
+weight: 13
 is_admin: null
 permissions:
   - 'accept translation jobs'

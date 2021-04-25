@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: article_creator
 label: 'Article creator'
-weight: -8
+weight: -13
 is_admin: false
 permissions:
   - 'access administration pages'

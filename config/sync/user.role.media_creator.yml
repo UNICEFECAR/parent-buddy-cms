@@ -6,7 +6,7 @@ _core:
   default_config_hash: 8J2t5AXYOAkiBwYiWFZtw3ZsBn2IiRHQIVfj58gH3II
 id: media_creator
 label: 'Media creator'
-weight: -12
+weight: -17
 is_admin: false
 permissions:
   - 'access ckeditor_media_browser entity browser pages'

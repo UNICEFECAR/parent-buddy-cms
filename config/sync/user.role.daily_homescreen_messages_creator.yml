@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: daily_homescreen_messages_creator
 label: 'Daily Homescreen Messages creator'
-weight: -2
+weight: -7
 is_admin: false
 permissions:
   - 'access administration pages'

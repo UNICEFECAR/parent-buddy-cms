@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: landing_page_creator
 label: 'Landing page creator'
-weight: 10
+weight: 5
 is_admin: false
 permissions:
   - 'access ckeditor_media_browser entity browser pages'

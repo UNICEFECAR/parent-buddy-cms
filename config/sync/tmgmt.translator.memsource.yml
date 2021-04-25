@@ -19,6 +19,8 @@ remote_languages_mappings:
   sq: sq
   ru: ru_ru
   al-sq: sq_al
+  by-be: be_by
+  by-ru: ru_by
   bg-bg: bg_bg
   gr-arb: ar
   gr-el: el_gr
@@ -35,3 +37,4 @@ remote_languages_mappings:
   tj-tg: tg_cyrl_tj
   uz-ru: ru_uz
   uz-uz: uz_latn_uz
+  rs-en: en

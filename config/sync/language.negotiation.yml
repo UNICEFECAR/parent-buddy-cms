@@ -23,6 +23,9 @@ url:
     gr-el: gr-el
     gr-arb: gr-arb
     gr-fa: gr-fa
+    by-be: by-be
+    by-ru: by-ru
+    rs-en: rs-en
   domains:
     en: ''
     sq: ''
@@ -44,6 +47,9 @@ url:
     gr-el: ''
     gr-arb: ''
     gr-fa: ''
+    by-be: ''
+    by-ru: ''
+    rs-en: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

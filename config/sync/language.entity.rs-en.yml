@@ -1,0 +1,9 @@
+uuid: 3d64b72e-fc2c-4fad-8525-80cab63f8205
+langcode: en
+status: true
+dependencies: {  }
+id: rs-en
+label: Serbia–English
+direction: ltr
+weight: 5
+locked: false

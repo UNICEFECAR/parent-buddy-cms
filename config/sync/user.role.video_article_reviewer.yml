@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: video_article_reviewer
 label: 'Video Article reviewer'
-weight: -5
+weight: -10
 is_admin: false
 permissions:
   - 'access administration pages'

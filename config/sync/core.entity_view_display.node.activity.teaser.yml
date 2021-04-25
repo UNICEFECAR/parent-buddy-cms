@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.activity.field_mandatory_content
     - field.field.node.activity.field_references_and_comments
     - field.field.node.activity.field_related_articles
+    - field.field.node.activity.field_related_milestones
     - field.field.node.activity.field_type_of_support
     - node.type.activity
   module:
@@ -44,6 +45,7 @@ hidden:
   field_mandatory_content: true
   field_references_and_comments: true
   field_related_articles: true
+  field_related_milestones: true
   field_type_of_support: true
   langcode: true
   search_api_excerpt: true

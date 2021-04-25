@@ -190,6 +190,17 @@ class ListMilestoneResource extends ResourceBase {
           }
           $one_entity['related_articles'] = $related_articles;
 
+          /**
+           * Get Entity Related Activities ID
+           */
+          $related_activities = [];
+          foreach ($translated_node->get('field_related_activities')->getValue() as $related_activity) {
+            $raid = $related_activity['target_id'];
+
+            $related_activities[] = $raid;
+          }
+          $one_entity['related_activities'] = $related_activities;
+
           $data[] = $one_entity;
         }
 

@@ -9,7 +9,7 @@ third_party_settings:
     description: 'Role assigned to Users created from Mobile Application.'
 id: application_user
 label: 'Application User'
-weight: 3
+weight: -2
 is_admin: null
 permissions:
   - 'view terms in categories'

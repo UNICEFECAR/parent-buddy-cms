@@ -6,7 +6,7 @@ _core:
   default_config_hash: 4xRLPoyhr5ynv4NK0SXc_NfjeWzkXN2PaV9zAmNIH3s
 id: layout_manager
 label: 'Layout manager'
-weight: 9
+weight: 4
 is_admin: false
 permissions:
   - 'administer node display'

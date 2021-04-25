@@ -735,7 +735,11 @@ display:
           operator: in
           value:
             en: en
+            sq: sq
+            ru: ru
             al-sq: al-sq
+            by-be: by-be
+            by-ru: by-ru
             bg-bg: bg-bg
             gr-arb: gr-arb
             gr-el: gr-el
@@ -747,6 +751,7 @@ display:
             me-cnr: me-cnr
             mk-sq: mk-sq
             mk-mk: mk-mk
+            rs-en: rs-en
             rs-sr: rs-sr
             tj-ru: tj-ru
             tj-tg: tj-tg
@@ -795,6 +800,11 @@ display:
               webform_reviewer: '0'
               application_evaluation: '0'
               manage_mandatory_content: '0'
+              translation_admin: '0'
+              translation_manager: '0'
+              translation_reviewer: '0'
+              activity_creator: '0'
+              activity_reviewer: '0'
             reduce: true
           is_grouped: false
           group_info:

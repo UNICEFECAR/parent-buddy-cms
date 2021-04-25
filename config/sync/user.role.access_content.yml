@@ -9,9 +9,10 @@ third_party_settings:
     description: 'Used to allow REST API to access Content of the Site.'
 id: access_content
 label: 'Access Content'
-weight: 6
+weight: 1
 is_admin: null
 permissions:
+  - 'restful get list_activity_resource'
   - 'restful get list_basic_page_resource'
   - 'restful get list_content_resource'
   - 'restful get list_daily_homescreen_message'

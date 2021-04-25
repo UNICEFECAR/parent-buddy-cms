@@ -1,0 +1,18 @@
+uuid: 534ed805-2428-4a7f-b0d7-b63885c4c778
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: translation_admin
+label: 'Translation admin'
+weight: 11
+is_admin: null
+permissions:
+  - 'accept translation jobs'
+  - 'administer tmgmt'
+  - 'create translation jobs'
+  - 'submit translation jobs'

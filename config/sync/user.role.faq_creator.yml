@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: faq_creator
 label: 'FAQ creator'
-weight: -10
+weight: -15
 is_admin: false
 permissions:
   - 'access administration pages'

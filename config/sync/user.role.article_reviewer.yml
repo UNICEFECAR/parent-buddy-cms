@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: article_reviewer
 label: 'Article reviewer'
-weight: -7
+weight: -12
 is_admin: false
 permissions:
   - 'access administration pages'

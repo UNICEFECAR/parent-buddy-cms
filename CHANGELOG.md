@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.1.4] - 2021-04-25
+
+### Changed
+- Added Related Activities and Related Milestones fields to Milestone and Activity Content Types respectively.
+- Added 3 new languages:
+  - Belarus-Belarusian
+  - Belarus-Russian
+  - Serbia–English
+- Adjusted API, so it can work with new fields.
+
+
 ## [1.1.3] - 2021-03-14
 
 ### Changed

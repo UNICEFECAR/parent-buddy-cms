@@ -1,0 +1,18 @@
+uuid: 15b67b7c-ab09-4491-a41e-fd9ca4a619fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - hal
+    - halo_beba_api
+id: list_activity_resource
+plugin_id: list_activity_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+  authentication:
+    - basic_auth

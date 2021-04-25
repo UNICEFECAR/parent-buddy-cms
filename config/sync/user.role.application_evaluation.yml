@@ -9,7 +9,7 @@ third_party_settings:
     description: 'Role that will be given to Users that are going to access the Application and evaluate it.'
 id: application_evaluation
 label: 'Application Evaluation'
-weight: 14
+weight: 9
 is_admin: null
 permissions:
   - 'access administration pages'

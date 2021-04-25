@@ -9,7 +9,7 @@ third_party_settings:
     description: 'Role that will have access to Field that will be used to mark Australian Articles.'
 id: manage_australian_articles
 label: 'Manage Australian Articles'
-weight: 0
+weight: -5
 is_admin: null
 permissions:
   - 'access private fields'

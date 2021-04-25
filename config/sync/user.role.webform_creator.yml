@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: webform_creator
 label: 'Webform creator'
-weight: 12
+weight: 7
 is_admin: false
 permissions:
   - 'access ckeditor_media_browser entity browser pages'

@@ -319,6 +319,11 @@ class ListContentResource extends ResourceBase {
                 $related_articles[] = $raid;
               }
               $one_entity['related_articles'] = $related_articles;
+
+              /**
+               * Get Mandatory Content data
+               */
+              $one_entity['mandatory_content'] = $translated_node->get('field_mandatory_content')->value;
             } elseif ($content_type === 'video_article') {
               /**
                * Get Article Cover Video data
@@ -364,6 +369,11 @@ class ListContentResource extends ResourceBase {
                 $related_articles[] = $raid;
               }
               $one_entity['related_articles'] = $related_articles;
+
+              /**
+               * Get Mandatory Content data
+               */
+              $one_entity['mandatory_content'] = $translated_node->get('field_mandatory_content')->value;
             }
 
             $data[] = $one_entity;

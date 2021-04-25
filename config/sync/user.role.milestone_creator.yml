@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: milestone_creator
 label: 'Milestone creator'
-weight: -4
+weight: -9
 is_admin: false
 permissions:
   - 'access administration pages'

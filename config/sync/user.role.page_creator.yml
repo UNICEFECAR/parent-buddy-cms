@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: page_creator
 label: 'Basic page creator'
-weight: 7
+weight: 2
 is_admin: false
 permissions:
   - 'access administration pages'

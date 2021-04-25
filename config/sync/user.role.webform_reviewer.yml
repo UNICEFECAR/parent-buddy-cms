@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: webform_reviewer
 label: 'Webform reviewer'
-weight: 13
+weight: 8
 is_admin: false
 permissions:
   - 'access content overview'

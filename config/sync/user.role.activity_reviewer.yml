@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: activity_reviewer
 label: 'Activity reviewer'
-weight: 19
+weight: 15
 is_admin: false
 permissions:
   - 'access content overview'

@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: daily_homescreen_messages_reviewer
 label: 'Daily Homescreen Messages reviewer'
-weight: -1
+weight: -6
 is_admin: false
 permissions:
   - 'access administration pages'

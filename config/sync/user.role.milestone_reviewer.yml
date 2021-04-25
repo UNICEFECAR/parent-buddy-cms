@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: milestone_reviewer
 label: 'Milestone reviewer'
-weight: -3
+weight: -8
 is_admin: false
 permissions:
   - 'access administration pages'
